@@ -19,6 +19,7 @@ const infoStyle = {
     float: "left",
     marginTop: "24px",
     marginRight: "10px"
+    
   },
   primary: {
     color: primaryColor
@@ -42,8 +43,8 @@ const infoStyle = {
     color: grayColor
   },
   icon: {
-    width: "36px",
-    height: "36px"
+    width: "26px",
+    height: "26px"
   },
   descriptionWrapper: {
     color: grayColor,
@@ -60,8 +61,8 @@ const infoStyle = {
     float: "none"
   },
   iconVertical: {
-    width: "61px",
-    height: "61px"
+    width: "30px",
+    height: "30px"
   }
 };
 

@@ -10,11 +10,12 @@ const footerStyle = {
     borderRadius: "3px",
     textDecoration: "none",
     position: "relative",
-    display: "block"
+    display: "block",
   },
   left: {
     float: "left!important",
-    display: "block"
+    display: "block",
+    color: '#ffffff'
   },
   right: {
     padding: "15px 0",
@@ -26,7 +27,8 @@ const footerStyle = {
     textAlign: "center",
     display: "flex",
     zIndex: "2",
-    position: "relative"
+    position: "relative",
+    backgroundColor:"#51038b"
   },
   a: {
     color: primaryColor,

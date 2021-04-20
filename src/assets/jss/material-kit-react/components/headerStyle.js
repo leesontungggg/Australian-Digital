@@ -65,6 +65,22 @@ const headerStyle = {
       background: "transparent"
     }
   },
+  title_img: {
+    ...defaultFont,
+    lineHeight: "30px",
+    fontSize: "18px",
+    borderRadius: "3px",
+    textTransform: "none",
+    color: "inherit",
+    padding: "8px 16px",
+    letterSpacing: "unset",
+    "&:hover,&:focus": {
+      color: "inherit",
+      background: "transparent"
+    },
+    width:"100%",
+    maxWidth: 160,
+  },
   appResponsive: {
     margin: "20px 10px"
   },
@@ -107,7 +123,7 @@ const headerStyle = {
   transparent: {
     backgroundColor: "transparent !important",
     boxShadow: "none",
-    paddingTop: "25px",
+    // paddingTop: "25px",
     color: "#FFFFFF"
   },
   dark: {

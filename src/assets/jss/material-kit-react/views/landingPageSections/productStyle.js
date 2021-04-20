@@ -14,7 +14,21 @@ const productStyle = {
   },
   description: {
     color: "#999"
-  }
+  },
+  yellowChip: {
+    color: '#FFBC42',
+    backgroundColor: '#FCA80F21',
+    fontWeight: 900
+  },
+  productionImage: {
+    width: '100%',
+    height: 'auto'
+  },
+  purpleButton: {
+    background: '#4B0082',
+    borderRadius: '50px',
+    padding: '12px 30px'
+  },
 };
 
 export default productStyle;

@@ -12,13 +12,16 @@ const landingPageStyle = {
     position: "relative",
     marginTop: "30px",
     minHeight: "32px",
-    color: "#FFFFFF",
-    textDecoration: "none"
+    color: "#4B0082",
+    textDecoration: "none",
+    
+    
   },
   subtitle: {
     fontSize: "1.313rem",
     maxWidth: "500px",
-    margin: "10px auto 0"
+    margin: "10px auto 0",
+    color: "#000000",
   },
   main: {
     background: "#FFFFFF",
@@ -30,6 +33,20 @@ const landingPageStyle = {
     borderRadius: "6px",
     boxShadow:
       "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
+  },
+  purpleButton: {
+    background: "#4B0082",
+    borderRadius: "50px"
+
+  },
+  yellowButton: {
+    background: "#FFBC42",
+    borderRadius: "50px",
+    marginLeft: "16px"
+  },
+  parallax_background: {
+    backgroundColor: "#ffffff",
+
   }
 };
 

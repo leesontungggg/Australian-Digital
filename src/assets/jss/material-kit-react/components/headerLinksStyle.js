@@ -37,7 +37,7 @@ const headerLinksStyle = theme => ({
     padding: "0 !important"
   },
   navLink: {
-    color: "inherit",
+    color: "#000000",
     position: "relative",
     padding: "0.9375rem",
     fontWeight: "400",
@@ -48,8 +48,11 @@ const headerLinksStyle = theme => ({
     textDecoration: "none",
     margin: "0px",
     display: "inline-flex",
+    backgroundColor:'transparent',
+    boxShadow:'none',
+    
     "&:hover,&:focus": {
-      color: "inherit",
+      color: "#4B0082",
       background: "rgba(200, 200, 200, 0.2)"
     },
     [theme.breakpoints.down("sm")]: {
@@ -87,7 +90,7 @@ const headerLinksStyle = theme => ({
     display: "inline-flex"
   },
   navLinkActive: {
-    color: "inherit",
+    color: "#4B0082",
     backgroundColor: "rgba(255, 255, 255, 0.1)"
   },
   icons: {
