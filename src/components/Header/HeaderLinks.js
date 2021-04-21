@@ -49,30 +49,30 @@ export default function HeaderLinks (props) {
           ]}
         /> */}
 
-        <Button target='_blank' className={classes.navLink}>
+        <Button href="/" className={classes.navLink}>
           Home
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button target='_blank' className={classes.navLink}>
+        <Button href="/about" className={classes.navLink}>
           About
         </Button>
       </ListItem>
 
       <ListItem className={classes.listItem}>
-        <Button target='_blank' className={classes.navLink}>
+        <Button href="/service" className={classes.navLink}>
           Service
         </Button>
       </ListItem>
 
       <ListItem className={classes.listItem}>
-        <Button target='_blank' className={classes.navLink}>
+        <Button href="/porfolio" className={classes.navLink}>
           Porfolio
         </Button>
       </ListItem>
 
       <ListItem className={classes.listItem}>
-        <Button target='_blank' className={classes.navLink}>
+        <Button href="/contact" className={classes.navLink}>
           Contact
         </Button>
       </ListItem>

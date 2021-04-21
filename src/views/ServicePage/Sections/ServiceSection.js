@@ -22,8 +22,8 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     ...title,
-    marginBottom: '1rem',
-    marginTop: '30px',
+    marginBottom: '3rem',
+    marginTop: '16px',
     minHeight: '32px',
     textDecoration: 'none',
     position: 'relative',
@@ -139,43 +139,13 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function ProductSection () {
+export default function ServiceSection () {
   const classes = useStyles()
   return (
     <div className={classes.section}>
-      <GridContainer justify='center'>
-        <GridItem xs={12} sm={6} md={6} lg={6}>
-          <img
-            className={classes.productionImage}
-            src={require('assets/img/about-min.png')}
-          ></img>
-        </GridItem>
-
-        <GridItem xs={12} sm={6} md={6} lg={6}>
-          <Chip label='ABOUT US' className={classes.yellowChip} />
-          <h2 className={classes.title}>
-            About <br />
-            Australian <br />
-            Digital
-          </h2>
-          <h5 className={classes.subtitle}>
-            We are a boutique Salesforce consultancy based in Sydney Australia.
-            Our consultants all have multiple Salesforce certifications and have
-            an excellent grasp of business and deep expertise and enthusiasm for
-            the Salesforce platform.
-          </h5>
-          <Button
-            color='#4B0082'
-            size='lg'
-            target='_blank'
-            rel='noopener noreferrer'
-            className={classes.purpleButton}
-          >
-            ABOUT US
-          </Button>
-        </GridItem>
-      </GridContainer>
       <div className={classes.services}>
+        <Chip label='Service' className={classes.yellowChip} />
+        <h2 className={classes.title}>WHAT CAN WE DO FOR YOU?</h2>
         <GridContainer className={classes.servicesGrid}>
           <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
             <InfoArea
@@ -261,66 +231,65 @@ export default function ProductSection () {
               vertical
             />
           </GridItem>
-          <Button
-            color='#4B0082'
-            size='lg'
-            target='_blank'
-            rel='noopener noreferrer'
-            className={classes.purpleButton}
-          >
-            VIEW SERVICES
-          </Button>
-        </GridContainer>
-      </div>
-      <div className={classes.whycustomer}>
-        <GridContainer justify='center'>
-          <GridItem xs={12} sm={6} md={6} lg={6}>
-            <Chip label='OUR WORK' className={classes.yellowChip} />
-            <h2 className={classes.title}>
-              Why Customers <br /> Love Us?
-            </h2>
-            <h5 className={classes.subtitle}>
-              We are passionate About Salesforce and what it can do to transform
-              your business when setup correctly. Our customers love us because
-              we listen and understand and truly care about delivering an
-              optimum solution to fit your business needs.
-            </h5>
-            <div className={classes.valueContainer}>
-              <div className={classes.valueItemContainer}>
+          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
+            <InfoArea
+              title='System Health Checks'
+              description='We are able to evaluate the health of your Salesforce org and consult with the team to remediate issues and propose improvements.'
+              src={
                 <img
-                  className={classes.valueIcon}
-                  src={require('assets/img/ico1h.png')}
+                  className={classes.servicesIcon}
+                  src={require('assets/img/ic7-min.png')}
                 ></img>
-                Deep Business Understanding
-              </div>
-
-              <div className={classes.valueItemContainer}>
-                <img
-                  className={classes.valueIcon}
-                  src={require('assets/img/ico2h.png')}
-                ></img>
-                Passionate about Salesforce
-              </div>
-            </div>
-
-            <Button
-              color='#4B0082'
-              size='lg'
-              target='_blank'
-              rel='noopener noreferrer'
-              className={classes.purpleButton}
-            >
-              ABOUT US
-            </Button>
+              }
+              iconColor='info'
+              vertical
+            />
           </GridItem>
-          <GridItem xs={12} sm={6} md={6} lg={6}>
-            <img
-              className={classes.productionImage}
-              src={require('assets/img/value.png')}
-            ></img>
+          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
+            <InfoArea
+              title='Application Architecture'
+              description='We are able design CRM and business solutions that streamline your business processes and provide the very best customer and user experience.'
+              src={
+                <img
+                  className={classes.servicesIcon}
+                  src={require('assets/img/ic8-min.png')}
+                ></img>
+              }
+              iconColor='info'
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
+            <InfoArea
+              title='Marketing Automation'
+              description='We are able to facilitate highly personalized marketing campaigns and customer journeys with Salesforce Marketing Cloud to allow you to grow a highly engaged customer base.'
+              src={
+                <img
+                  className={classes.servicesIcon}
+                  src={require('assets/img/ic9-min.png')}
+                ></img>
+              }
+              iconColor='info'
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
+            <InfoArea
+              title='Business Analysis'
+              description='We are able to conduct business analysis work to design solutions that add value to your users and customers and make the very best use of the latest technology.'
+              src={
+                <img
+                  className={classes.servicesIcon}
+                  src={require('assets/img/ic10-min.png')}
+                ></img>
+              }
+              iconColor='info'
+              vertical
+            />
           </GridItem>
         </GridContainer>
       </div>
+
       <div className={classes.contact}>
         <h2 className={classes.title}>CONTACT US</h2>
         <GridContainer justify='center'>
@@ -332,10 +301,10 @@ export default function ProductSection () {
             </h4>
           </GridItem>
           <GridItem xs={12} sm={6} md={6} lg={6}>
-          <h4 className={classes.contactPhone}>
-          +61 404 852 274 <br/>enquiry@australian-digital.com
+            <h4 className={classes.contactPhone}>
+              +61 404 852 274 <br />
+              enquiry@australian-digital.com
             </h4>
-            
           </GridItem>
         </GridContainer>
       </div>

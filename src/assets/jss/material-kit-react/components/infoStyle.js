@@ -52,10 +52,10 @@ const infoStyle = {
   },
   title,
   description: {
-    color: grayColor,
+    color: '#000000',
     overflow: "hidden",
     marginTop: "0px",
-    fontSize: "14px"
+    fontSize: "15px"
   },
   iconWrapperVertical: {
     float: "none"

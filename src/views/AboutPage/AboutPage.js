@@ -9,21 +9,14 @@ import { makeStyles } from '@material-ui/core/styles'
 // core components
 import Header from 'components/Header/Header.js'
 import Footer from 'components/Footer/Footer.js'
-import GridContainer from 'components/Grid/GridContainer.js'
-import GridItem from 'components/Grid/GridItem.js'
-import Button from 'components/CustomButtons/Button.js'
+
 import HeaderLinks from 'components/Header/HeaderLinks.js'
-import Parallax from 'components/Parallax/Parallax.js'
 
 import { container, title } from 'assets/jss/material-kit-react.js'
-import Chip from '@material-ui/core/Chip'
-import image from 'assets/img/f-bg-min.jpg'
 
 // Sections for this page
-import ProductSection from './Sections/ProductSection.js'
-import TeamSection from './Sections/TeamSection.js'
-import WorkSection from './Sections/WorkSection.js'
-import { Repeat } from '@material-ui/icons'
+import AboutSection from './Sections/AboutSection.js'
+
 
 const dashboardRoutes = []
 
@@ -73,6 +66,15 @@ const useStyles = makeStyles(theme => ({
     background: '#FFFFFF',
     position: 'relative',
     zIndex: '3',
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: '1rem'
+    },
+    [theme.breakpoints.up('md')]: {
+      paddingTop: '10rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingTop: '16rem'
+    }
   },
 
   purpleButton: {
@@ -95,7 +97,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function LandingPage (props) {
+export default function AboutPage (props) {
   const classes = useStyles()
   const { ...rest } = props
   return (
@@ -112,51 +114,9 @@ export default function LandingPage (props) {
         }}
         {...rest}
       />
-      <Parallax
-        className={classes.parallax_background}
-        image={require('assets/img/landing.png')}
-      >
-        <div className={classes.container}>
-          <GridContainer>
-            <GridItem xs={6} sm={6} md={6}>
-              <Chip
-                label='WELCOME TO AUSTRALIAN DIGITAL'
-                className={classes.yellowChip}
-              />
-              <h1 className={classes.title}>
-                We Provide Salesforce <br /> Consultancy
-              </h1>
-              <h4 className={classes.subtitle}>
-                Consultancy, system implementation and enhancement, managed
-                services and solutions to perfect your customer experience.
-              </h4>
-              <br />
-              <Button
-                color='#4B0082'
-                size='lg'
-                target='_blank'
-                rel='noopener noreferrer'
-                className={classes.purpleButton}
-              >
-                Read more
-              </Button>
-
-              <Button
-                color='danger'
-                size='lg'
-                target='_blank'
-                rel='noopener noreferrer'
-                className={classes.yellowButton}
-              >
-                Contact us
-              </Button>
-            </GridItem>
-          </GridContainer>
-        </div>
-      </Parallax>
       <div className={classes.main}>
         <div className={classes.container}>
-          <ProductSection />
+          <AboutSection />
         </div>
       </div>
       <Footer />

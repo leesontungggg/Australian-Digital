@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     color: '#4B0082',
     textDecoration: 'none',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem'
+      fontSize: '1.5rem'
     },
     [theme.breakpoints.up('md')]: {
       fontSize: '2rem'
@@ -78,10 +78,10 @@ const useStyles = makeStyles(theme => ({
     margin: '0px 16px',
     borderRadius: '24px',
     boxShadow:
-      '0 -3px 24px 2px rgb(0 0 0 / 5%), 0 6px 30px 5px rgb(0 0 0 / 0%), 0 8px 10px -5px rgb(0 0 0 / 0%)'
+      '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
   },
   servicesGrid: {
-    gridGap: '40px 20px',
+    gridGap: '20px 20px',
     justifyContent: 'center'
   },
   servicesIcon: {
@@ -139,7 +139,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function ProductSection () {
+export default function AboutSection () {
   const classes = useStyles()
   return (
     <div className={classes.section}>
@@ -150,13 +150,12 @@ export default function ProductSection () {
             src={require('assets/img/about-min.png')}
           ></img>
         </GridItem>
-
         <GridItem xs={12} sm={6} md={6} lg={6}>
-          <Chip label='ABOUT US' className={classes.yellowChip} />
+          <Chip label='About Us' className={classes.yellowChip} />
+
           <h2 className={classes.title}>
             About <br />
-            Australian <br />
-            Digital
+            Australian Digital
           </h2>
           <h5 className={classes.subtitle}>
             We are a boutique Salesforce consultancy based in Sydney Australia.
@@ -332,10 +331,10 @@ export default function ProductSection () {
             </h4>
           </GridItem>
           <GridItem xs={12} sm={6} md={6} lg={6}>
-          <h4 className={classes.contactPhone}>
-          +61 404 852 274 <br/>enquiry@australian-digital.com
+            <h4 className={classes.contactPhone}>
+              +61 404 852 274 <br />
+              enquiry@australian-digital.com
             </h4>
-            
           </GridItem>
         </GridContainer>
       </div>
