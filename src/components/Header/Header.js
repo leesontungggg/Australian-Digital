@@ -233,7 +233,7 @@ export default function Header(props) {
     [classes.absolute]: absolute,
     [classes.fixed]: fixed
   });
-  const brandComponent = <img alt="Australian Digital" className={classes.title_img} src={require("assets/australian-digital/2020/12/350xl.png")}></img>;
+  const brandComponent = <a href="/"><img href="/" alt="Australian Digital" className={classes.title_img} src={require("assets/australian-digital/2020/12/350xl.png")}></img></a>;
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>

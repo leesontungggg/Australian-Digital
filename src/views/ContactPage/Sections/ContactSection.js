@@ -261,6 +261,12 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
+function getFormData (object) {
+  const formData = new FormData()
+  Object.keys(object).forEach(key => formData.append(key, object[key]))
+  return formData
+}
+
 export default function ContactSection () {
   const formik = useFormik({
     initialValues: {
@@ -268,7 +274,13 @@ export default function ContactSection () {
     },
     validationSchema: validationSchema,
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2))
+
+      fetch('https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8', {
+        method: 'POST',
+        mode: "no-cors",
+        body: new URLSearchParams(values)
+      })
+      // alert(JSON.stringify(values, null, 2))
     }
   })
 
@@ -303,8 +315,8 @@ export default function ContactSection () {
                 className={classes.textFieldSpacing}
                 fullWidth
                 variant='outlined'
-                id='firstName'
-                name='firstName'
+                id='first_name'
+                name='first_name'
                 label='First Name'
                 onChange={formik.handleChange}
                 autoComplete='off'
@@ -315,8 +327,8 @@ export default function ContactSection () {
                 className={classes.textFieldSpacing}
                 fullWidth
                 variant='outlined'
-                id='lastName'
-                name='lastName'
+                id='last_name'
+                name='last_name'
                 label='Last Name'
                 onChange={formik.handleChange}
                 autoComplete='off'
@@ -397,35 +409,33 @@ export default function ContactSection () {
               />
             </GridItem>
             <GridItem xs={12} sm={6} md={6} lg={6}>
-            <TextField
+              <TextField
                 className={classes.textFieldSpacing}
                 fullWidth
                 select
                 variant='outlined'
-                id='business'
-                name='business'
+                id='00N5g000006oAit'
+                name='00N5g000006oAit'
                 label='Business'
                 onChange={formik.handleChange}
                 autoComplete='off'
               >
                 <MenuItem value={'none'}>None</MenuItem>
-                  <MenuItem value={'Australian Digital'}>
-                    Australian Digital
-                  </MenuItem>
-                  <MenuItem value={'Global Aspects'}>Global Aspects</MenuItem>
+                <MenuItem value={'Australian Digital'}>
+                  Australian Digital
+                </MenuItem>
+                <MenuItem value={'Global Aspects'}>Global Aspects</MenuItem>
               </TextField>
-              
             </GridItem>
 
-            
             <GridItem xs={12} sm={6} md={6} lg={6}>
               <TextField
                 className={classes.textFieldSpacing}
                 fullWidth
                 select
                 variant='outlined'
-                id='lead-source'
-                name='lead-source'
+                id='lead_source'
+                name='lead_source'
                 label='Lead Source'
                 onChange={formik.handleChange}
                 autoComplete='off'
