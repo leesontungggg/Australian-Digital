@@ -2,10 +2,7 @@ import React from 'react'
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
 
-// @material-ui/icons
-import Chat from '@material-ui/icons/Chat'
-import VerifiedUser from '@material-ui/icons/VerifiedUser'
-import Fingerprint from '@material-ui/icons/Fingerprint'
+
 // core components
 import GridContainer from 'components/Grid/GridContainer.js'
 import GridItem from 'components/Grid/GridItem.js'
@@ -176,6 +173,8 @@ export default function ProductSection () {
         </GridItem>
       </GridContainer>
       <div className={classes.services}>
+        <Chip label='SERVICES' className={classes.yellowChip} />
+        <h2 className={classes.title}>WHAT CAN WE DO FOR YOU?</h2>
         <GridContainer className={classes.servicesGrid}>
           <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
             <InfoArea
@@ -332,10 +331,10 @@ export default function ProductSection () {
             </h4>
           </GridItem>
           <GridItem xs={12} sm={6} md={6} lg={6}>
-          <h4 className={classes.contactPhone}>
-          +61 404 852 274 <br/>enquiry@australian-digital.com
+            <h4 className={classes.contactPhone}>
+              +61 404 852 274 <br />
+              enquiry@australian-digital.com
             </h4>
-            
           </GridItem>
         </GridContainer>
       </div>

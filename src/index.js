@@ -12,6 +12,8 @@ import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import AboutPage from "views/AboutPage/AboutPage.js";
 import ServicePage from "views/ServicePage/ServicePage.js";
+import PortfolioPage from "views/PortfolioPage/PortfolioPage.js";
+import ContactPage from "views/ContactPage/ContactPage";
 
 
 
@@ -25,6 +27,9 @@ ReactDOM.render(
       <Route path="/login-page" component={LoginPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/service" component={ServicePage} />
+      <Route path="/portfolio" component={PortfolioPage} />
+      <Route path="/contact" component={ContactPage} />
+
       <Route path="/" component={LandingPage} />
     </Switch>
   </Router>,

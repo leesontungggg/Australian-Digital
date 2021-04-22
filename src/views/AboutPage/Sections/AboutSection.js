@@ -2,10 +2,7 @@ import React from 'react'
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
 
-// @material-ui/icons
-import Chat from '@material-ui/icons/Chat'
-import VerifiedUser from '@material-ui/icons/VerifiedUser'
-import Fingerprint from '@material-ui/icons/Fingerprint'
+
 // core components
 import GridContainer from 'components/Grid/GridContainer.js'
 import GridItem from 'components/Grid/GridItem.js'
@@ -78,7 +75,7 @@ const useStyles = makeStyles(theme => ({
     margin: '0px 16px',
     borderRadius: '24px',
     boxShadow:
-      '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
+      '0 -3px 24px 2px rgb(0 0 0 / 5%), 0 6px 30px 5px rgb(0 0 0 / 0%), 0 8px 10px -5px rgb(0 0 0 / 0%)'
   },
   servicesGrid: {
     gridGap: '20px 20px',
