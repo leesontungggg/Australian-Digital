@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -261,26 +261,31 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-function getFormData (object) {
-  const formData = new FormData()
-  Object.keys(object).forEach(key => formData.append(key, object[key]))
-  return formData
-}
-
 export default function ContactSection () {
+  const [isSuccess, setIsSuccess] = useState(false)
+
   const formik = useFormik({
     initialValues: {
       email: 'foobar@example.com'
     },
     validationSchema: validationSchema,
     onSubmit: values => {
+      values.oid = '00D5g000004Q7r1'
+      values.submit = 'Submit'
+      values['00N5g000006oAit'] = 'Australian Digital'
+      values.lead_source = 'Web'
 
-      fetch('https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8', {
-        method: 'POST',
-        mode: "no-cors",
-        body: new URLSearchParams(values)
+      fetch(
+        'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8',
+        {
+          method: 'POST',
+          mode: 'no-cors',
+          body: new URLSearchParams(values)
+        }
+      ).then(function (response) {
+        console.log(response)
+        setIsSuccess(true)
       })
-      // alert(JSON.stringify(values, null, 2))
     }
   })
 
@@ -372,7 +377,7 @@ export default function ContactSection () {
                 autoComplete='off'
               />
             </GridItem>
-            <GridItem xs={12} sm={6} md={6} lg={6}>
+            {/* <GridItem xs={12} sm={6} md={6} lg={6}>
               <TextField
                 className={classes.textFieldSpacing}
                 fullWidth
@@ -383,8 +388,8 @@ export default function ContactSection () {
                 onChange={formik.handleChange}
                 autoComplete='off'
               />
-            </GridItem>
-            <GridItem xs={12} sm={6} md={6} lg={6}>
+            </GridItem> */}
+            {/* <GridItem xs={12} sm={6} md={6} lg={6}>
               <TextField
                 className={classes.textFieldSpacing}
                 fullWidth
@@ -395,7 +400,7 @@ export default function ContactSection () {
                 onChange={formik.handleChange}
                 autoComplete='off'
               />
-            </GridItem>
+            </GridItem> */}
             <GridItem xs={12} sm={6} md={6} lg={6}>
               <TextField
                 className={classes.textFieldSpacing}
@@ -408,7 +413,7 @@ export default function ContactSection () {
                 autoComplete='off'
               />
             </GridItem>
-            <GridItem xs={12} sm={6} md={6} lg={6}>
+            {/* <GridItem xs={12} sm={6} md={6} lg={6}>
               <TextField
                 className={classes.textFieldSpacing}
                 fullWidth
@@ -419,16 +424,16 @@ export default function ContactSection () {
                 label='Business'
                 onChange={formik.handleChange}
                 autoComplete='off'
+                value={'Australian Digital'}
               >
-                <MenuItem value={'none'}>None</MenuItem>
                 <MenuItem value={'Australian Digital'}>
                   Australian Digital
                 </MenuItem>
                 <MenuItem value={'Global Aspects'}>Global Aspects</MenuItem>
               </TextField>
-            </GridItem>
+            </GridItem> */}
 
-            <GridItem xs={12} sm={6} md={6} lg={6}>
+            {/* <GridItem xs={12} sm={6} md={6} lg={6}>
               <TextField
                 className={classes.textFieldSpacing}
                 fullWidth
@@ -466,15 +471,28 @@ export default function ContactSection () {
                   Global Aspects Website
                 </MenuItem>
               </TextField>
+            </GridItem> */}
+            <GridItem xs={12} sm={12} md={12} lg={12}>
+              <Button
+                className={classes.yellowSubmitButton}
+                variant='contained'
+                type='submit'
+              >
+                Submit
+              </Button>
             </GridItem>
 
-            <Button
-              className={classes.yellowSubmitButton}
-              variant='contained'
-              type='submit'
-            >
-              Submit
-            </Button>
+            {isSuccess ? (
+              <GridItem
+                style={{ textAlign: 'center' }}
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+              >
+                <h4>Successfully Submitted!</h4>
+              </GridItem>
+            ) : null}
           </GridContainer>
         </form>
       </div>
