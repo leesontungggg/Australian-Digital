@@ -35,13 +35,13 @@ const useStyles = makeStyles(theme => ({
     color: '#4B0082',
     textDecoration: 'none',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem'
-    },
-    [theme.breakpoints.up('md')]: {
       fontSize: '2rem'
     },
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up('md')]: {
       fontSize: '3rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '3.5rem'
     }
   },
   formTitle: {
@@ -53,13 +53,13 @@ const useStyles = makeStyles(theme => ({
     color: '#FFBC42',
     textDecoration: 'none',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem'
-    },
-    [theme.breakpoints.up('md')]: {
       fontSize: '2rem'
     },
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up('md')]: {
       fontSize: '3rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '3.5rem'
     }
   },
   subtitle: {
@@ -68,13 +68,13 @@ const useStyles = makeStyles(theme => ({
     margin: '10px 0',
     color: '#000000',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '0.8rem'
-    },
-    [theme.breakpoints.up('md')]: {
       fontSize: '1rem'
     },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
+    },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '1.313rem'
+      fontSize: '1.5rem'
     }
   },
   description: {
@@ -98,7 +98,16 @@ const useStyles = makeStyles(theme => ({
     background: '#FFBC42',
     borderRadius: '50px',
     padding: '12px 30px',
-    marginTop: '32px'
+    marginTop: '32px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1rem'
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '1.5rem'
+    }
   },
   services: {
     marginTop: '100px'
@@ -141,13 +150,13 @@ const useStyles = makeStyles(theme => ({
     margin: '10px 0',
     color: '#000000',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '0.8rem'
-    },
-    [theme.breakpoints.up('md')]: {
       fontSize: '1rem'
     },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
+    },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '1.313rem'
+      fontSize: '1.5rem'
     }
   },
   contactPhone: {
@@ -157,13 +166,13 @@ const useStyles = makeStyles(theme => ({
     margin: '10px 0',
     color: '#000000',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '0.8rem'
-    },
-    [theme.breakpoints.up('md')]: {
       fontSize: '1rem'
     },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
+    },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '1.313rem'
+      fontSize: '1.5rem'
     }
   },
   imgPortfolio: {

@@ -39,13 +39,13 @@ const useStyles = makeStyles(theme => ({
     margin: '10px 0',
     color: '#000000',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '0.8rem'
-    },
-    [theme.breakpoints.up('md')]: {
       fontSize: '1rem'
     },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
+    },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '1.313rem'
+      fontSize: '1.5rem'
     }
   },
   description: {
