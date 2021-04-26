@@ -1,6 +1,4 @@
 import React from 'react'
-// nodejs library that concatenates classes
-import classNames from 'classnames'
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -17,13 +15,10 @@ import Parallax from 'components/Parallax/Parallax.js'
 
 import { container, title } from 'assets/jss/material-kit-react.js'
 import Chip from '@material-ui/core/Chip'
-import image from 'assets/img/f-bg-min.jpg'
 
 // Sections for this page
 import ProductSection from './Sections/ProductSection.js'
-import TeamSection from './Sections/TeamSection.js'
-import WorkSection from './Sections/WorkSection.js'
-import { Repeat } from '@material-ui/icons'
+
 
 const dashboardRoutes = []
 
@@ -114,7 +109,7 @@ export default function LandingPage (props) {
       />
       <Parallax
         className={classes.parallax_background}
-        image={require('assets/img/landing.png')}
+        image={require('assets/img/landing.webp')}
       >
         <div className={classes.container}>
           <GridContainer>

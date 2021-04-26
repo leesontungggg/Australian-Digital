@@ -2,16 +2,11 @@ import React from 'react'
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
 
-// @material-ui/icons
-import Chat from '@material-ui/icons/Chat'
-import VerifiedUser from '@material-ui/icons/VerifiedUser'
-import Fingerprint from '@material-ui/icons/Fingerprint'
 // core components
 import GridContainer from 'components/Grid/GridContainer.js'
 import GridItem from 'components/Grid/GridItem.js'
 import InfoArea from 'components/InfoArea/InfoArea.js'
 import Chip from '@material-ui/core/Chip'
-import Button from 'components/CustomButtons/Button.js'
 
 import { title } from 'assets/jss/material-kit-react.js'
 
@@ -28,7 +23,6 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     position: 'relative',
     color: '#4B0082',
-    textDecoration: 'none',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1rem'
     },
@@ -153,8 +147,9 @@ export default function ServiceSection () {
               description='We provide expertise on the Salesforce Platform whether you are looking to implement Sales Cloud, increase your Salesforce foot print with Service Cloud or add a customer or partner Community.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic.png')}
+                  src={require('assets/img/ic.webp')}
                 ></img>
               }
               iconColor='info'
@@ -167,8 +162,9 @@ export default function ServiceSection () {
               description='We are highly experienced at designing and building integrations between Salesforce and many other platforms. We are also highly accomplished at migrating data into new and existing Salesforce orgs.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic2.png')}
+                  src={require('assets/img/ic2.webp')}
                 ></img>
               }
               iconColor='info'
@@ -181,8 +177,9 @@ export default function ServiceSection () {
               description='We design and build Salesforce archiving solutions to prevent excess data conversations and costs and maximize the health and performance of your org.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic3-min.png')}
+                  src={require('assets/img/ic3-min.webp')}
                 ></img>
               }
               iconColor='info'
@@ -195,8 +192,9 @@ export default function ServiceSection () {
               description='Although we strive for clicks not code where-ever possible we are also have highly experienced developers to build custom components, processes and Salesforce integrations.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic4-min.png')}
+                  src={require('assets/img/ic4-min.webp')}
                 ></img>
               }
               iconColor='info'
@@ -209,8 +207,9 @@ export default function ServiceSection () {
               description='We provide a highly efficient admin support service which allows you to focus on doing what you do best. Running your business and growing your highly engaged customer base.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic5-min.png')}
+                  src={require('assets/img/ic5-min.webp')}
                 ></img>
               }
               iconColor='info'
@@ -223,8 +222,9 @@ export default function ServiceSection () {
               description='We are able to design and build improvements to your existing Salesforce org. Please talk to us about what we can improve for you.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic6-min.png')}
+                  src={require('assets/img/ic6-min.webp')}
                 ></img>
               }
               iconColor='info'
@@ -237,8 +237,9 @@ export default function ServiceSection () {
               description='We are able to evaluate the health of your Salesforce org and consult with the team to remediate issues and propose improvements.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic7-min.png')}
+                  src={require('assets/img/ic7-min.webp')}
                 ></img>
               }
               iconColor='info'
@@ -251,8 +252,9 @@ export default function ServiceSection () {
               description='We are able design CRM and business solutions that streamline your business processes and provide the very best customer and user experience.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic8-min.png')}
+                  src={require('assets/img/ic8-min.webp')}
                 ></img>
               }
               iconColor='info'
@@ -265,8 +267,9 @@ export default function ServiceSection () {
               description='We are able to facilitate highly personalized marketing campaigns and customer journeys with Salesforce Marketing Cloud to allow you to grow a highly engaged customer base.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic9-min.png')}
+                  src={require('assets/img/ic9-min.webp')}
                 ></img>
               }
               iconColor='info'
@@ -279,8 +282,9 @@ export default function ServiceSection () {
               description='We are able to conduct business analysis work to design solutions that add value to your users and customers and make the very best use of the latest technology.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic10-min.png')}
+                  src={require('assets/img/ic10-min.webp')}
                 ></img>
               }
               iconColor='info'

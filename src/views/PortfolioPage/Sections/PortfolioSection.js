@@ -22,7 +22,6 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     position: 'relative',
     color: '#4B0082',
-    textDecoration: 'none',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1rem'
     },
@@ -153,18 +152,21 @@ export default function PortfolioSection () {
                 <GridContainer justify='center'>
                   <GridItem xs={12} sm={6} md={4} lg={4}>
                     <img
+                      alt='Australian Digital'
                       className={classes.imgPortfolio}
                       src={require('assets/img/p1-min.jpg')}
                     ></img>
                   </GridItem>
                   <GridItem xs={12} sm={6} md={4} lg={4}>
                     <img
+                      alt='Australian Digital'
                       className={classes.imgPortfolio}
                       src={require('assets/img/p2-min.jpg')}
                     ></img>
                   </GridItem>
                   <GridItem xs={12} sm={6} md={4} lg={4}>
                     <img
+                      alt='Australian Digital'
                       className={classes.imgPortfolio}
                       src={require('assets/img/p3-min.jpg')}
                     ></img>
@@ -178,18 +180,21 @@ export default function PortfolioSection () {
                 <GridContainer justify='center'>
                   <GridItem xs={12} sm={6} md={4} lg={4}>
                     <img
+                      alt='Australian Digital'
                       className={classes.imgPortfolio}
                       src={require('assets/img/p1-min.jpg')}
                     ></img>
                   </GridItem>
                   <GridItem xs={12} sm={6} md={4} lg={4}>
                     <img
+                      alt='Australian Digital'
                       className={classes.imgPortfolio}
                       src={require('assets/img/p2-min.jpg')}
                     ></img>
                   </GridItem>
                   <GridItem xs={12} sm={6} md={4} lg={4}>
                     <img
+                      alt='Australian Digital'
                       className={classes.imgPortfolio}
                       src={require('assets/img/p3-min.jpg')}
                     ></img>
@@ -203,18 +208,21 @@ export default function PortfolioSection () {
                 <GridContainer justify='center'>
                   <GridItem xs={12} sm={6} md={4} lg={4}>
                     <img
+                      alt='Australian Digital'
                       className={classes.imgPortfolio}
                       src={require('assets/img/p1-min.jpg')}
                     ></img>
                   </GridItem>
                   <GridItem xs={12} sm={6} md={4} lg={4}>
                     <img
+                      alt='Australian Digital'
                       className={classes.imgPortfolio}
                       src={require('assets/img/p2-min.jpg')}
                     ></img>
                   </GridItem>
                   <GridItem xs={12} sm={6} md={4} lg={4}>
                     <img
+                      alt='Australian Digital'
                       className={classes.imgPortfolio}
                       src={require('assets/img/p3-min.jpg')}
                     ></img>

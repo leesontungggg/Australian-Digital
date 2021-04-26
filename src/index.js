@@ -6,10 +6,7 @@ import { Router, Route, Switch } from "react-router-dom";
 import "assets/scss/material-kit-react.scss?v=1.9.0";
 
 // pages for this product
-import Components from "views/Components/Components.js";
 import LandingPage from "views/LandingPage/LandingPage.js";
-import ProfilePage from "views/ProfilePage/ProfilePage.js";
-import LoginPage from "views/LoginPage/LoginPage.js";
 import AboutPage from "views/AboutPage/AboutPage.js";
 import ServicePage from "views/ServicePage/ServicePage.js";
 import PortfolioPage from "views/PortfolioPage/PortfolioPage.js";
@@ -22,9 +19,6 @@ var hist = createBrowserHistory();
 ReactDOM.render(
   <Router history={hist}>
     <Switch>
-      <Route path="/component" component={Components} />
-      <Route path="/profile-page" component={ProfilePage} />
-      <Route path="/login-page" component={LoginPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/service" component={ServicePage} />
       <Route path="/portfolio" component={PortfolioPage} />

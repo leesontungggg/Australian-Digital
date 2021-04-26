@@ -1,19 +1,19 @@
 {
-  "name": "material-kit-react",
+  "name": "australian-digital",
   "homepage": "https://github.com/creativetimofficial/material-kit-react",
   "authors": [
-    "creative-tim"
+    "TUNG"
   ],
-  "description": "A Badass Material-UI Kit based on Material Design",
+  "description": "Australian Digital",
   "main": "dist/index.js",
   "keywords": [
-    "material",
+    "Australian",
+    "Digital",
     "design",
-    "material-ui",
     "google",
     "twitter"
   ],
-  "license": "Creative TIM License",
+  "license": "TUNG",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -11,7 +11,6 @@ import { useFormik } from 'formik'
 import * as yup from 'yup'
 import Button from 'components/CustomButtons/Button.js'
 import TextField from '@material-ui/core/TextField'
-import MenuItem from '@material-ui/core/MenuItem'
 
 const validationSchema = yup.object({
   email: yup
@@ -33,7 +32,6 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     position: 'relative',
     color: '#4B0082',
-    textDecoration: 'none',
     [theme.breakpoints.down('sm')]: {
       fontSize: '2rem'
     },
@@ -51,7 +49,6 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     position: 'relative',
     color: '#FFBC42',
-    textDecoration: 'none',
     [theme.breakpoints.down('sm')]: {
       fontSize: '2rem'
     },
@@ -314,6 +311,7 @@ export default function ContactSection () {
           </GridItem>
           <GridItem xs={12} sm={6} md={6} lg={6}>
             <img
+              alt='Australian Digital'
               className={classes.productionImage}
               src={require('assets/img/teamwork.svg')}
             ></img>

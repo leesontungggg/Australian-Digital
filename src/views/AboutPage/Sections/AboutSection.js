@@ -2,7 +2,6 @@ import React from 'react'
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
 
-
 // core components
 import GridContainer from 'components/Grid/GridContainer.js'
 import GridItem from 'components/Grid/GridItem.js'
@@ -25,7 +24,6 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     position: 'relative',
     color: '#4B0082',
-    textDecoration: 'none',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.5rem'
     },
@@ -143,8 +141,9 @@ export default function AboutSection () {
       <GridContainer justify='center'>
         <GridItem xs={12} sm={6} md={6} lg={6}>
           <img
+            alt='Australian Digital'
             className={classes.productionImage}
-            src={require('assets/img/about-min.png')}
+            src={require('assets/img/about-min.webp')}
           ></img>
         </GridItem>
         <GridItem xs={12} sm={6} md={6} lg={6}>
@@ -179,8 +178,9 @@ export default function AboutSection () {
               description='We provide expertise on the Salesforce Platform whether you are looking to implement Sales Cloud, increase your Salesforce foot print with Service Cloud or add a customer or partner Community.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic.png')}
+                  src={require('assets/img/ic.webp')}
                 ></img>
               }
               iconColor='info'
@@ -193,8 +193,9 @@ export default function AboutSection () {
               description='We are highly experienced at designing and building integrations between Salesforce and many other platforms. We are also highly accomplished at migrating data into new and existing Salesforce orgs.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic2.png')}
+                  src={require('assets/img/ic2.webp')}
                 ></img>
               }
               iconColor='info'
@@ -207,8 +208,9 @@ export default function AboutSection () {
               description='We design and build Salesforce archiving solutions to prevent excess data conversations and costs and maximize the health and performance of your org.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic3-min.png')}
+                  src={require('assets/img/ic3-min.webp')}
                 ></img>
               }
               iconColor='info'
@@ -221,8 +223,9 @@ export default function AboutSection () {
               description='Although we strive for clicks not code where-ever possible we are also have highly experienced developers to build custom components, processes and Salesforce integrations.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic4-min.png')}
+                  src={require('assets/img/ic4-min.webp')}
                 ></img>
               }
               iconColor='info'
@@ -235,8 +238,9 @@ export default function AboutSection () {
               description='We provide a highly efficient admin support service which allows you to focus on doing what you do best. Running your business and growing your highly engaged customer base.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic5-min.png')}
+                  src={require('assets/img/ic5-min.webp')}
                 ></img>
               }
               iconColor='info'
@@ -249,8 +253,9 @@ export default function AboutSection () {
               description='We are able to design and build improvements to your existing Salesforce org. Please talk to us about what we can improve for you.'
               src={
                 <img
+                  alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic6-min.png')}
+                  src={require('assets/img/ic6-min.webp')}
                 ></img>
               }
               iconColor='info'
@@ -284,16 +289,18 @@ export default function AboutSection () {
             <div className={classes.valueContainer}>
               <div className={classes.valueItemContainer}>
                 <img
+                  alt='Australian Digital'
                   className={classes.valueIcon}
-                  src={require('assets/img/ico1h.png')}
+                  src={require('assets/img/ico1h.webp')}
                 ></img>
                 Deep Business Understanding
               </div>
 
               <div className={classes.valueItemContainer}>
                 <img
+                  alt='Australian Digital'
                   className={classes.valueIcon}
-                  src={require('assets/img/ico2h.png')}
+                  src={require('assets/img/ico2h.webp')}
                 ></img>
                 Passionate about Salesforce
               </div>
@@ -311,8 +318,9 @@ export default function AboutSection () {
           </GridItem>
           <GridItem xs={12} sm={6} md={6} lg={6}>
             <img
+              alt='Australian Digital'
               className={classes.productionImage}
-              src={require('assets/img/value.png')}
+              src={require('assets/img/value.webp')}
             ></img>
           </GridItem>
         </GridContainer>
