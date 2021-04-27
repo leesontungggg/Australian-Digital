@@ -136,9 +136,9 @@ export default function LandingPage(props) {
               </h4>
               <br />
               <Button
+                href="/about"
                 color="#4B0082"
                 size="lg"
-                target="_blank"
                 rel="noopener noreferrer"
                 className={classes.purpleButton}
               >
@@ -147,8 +147,8 @@ export default function LandingPage(props) {
 
               <Button
                 color="danger"
+                href="/contact"
                 size="lg"
-                target="_blank"
                 rel="noopener noreferrer"
                 className={classes.yellowButton}
               >

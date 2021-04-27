@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: 300,
     },
     [theme.breakpoints.up("lg")]: {
-      maxWidth: 400,
+      maxWidth: 300,
     },
   },
   appResponsive: {
