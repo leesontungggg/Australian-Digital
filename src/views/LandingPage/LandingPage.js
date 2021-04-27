@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -17,14 +17,14 @@ import { container, title } from 'assets/jss/material-kit-react.js'
 import Chip from '@material-ui/core/Chip'
 
 // Sections for this page
-import ProductSection from './Sections/ProductSection.js'
 
+const ProductSection = React.lazy(() => import('./Sections/ProductSection.js'))
 
 const dashboardRoutes = []
 
 const useStyles = makeStyles(theme => ({
   white_main: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#ffffff'
   },
   container: {
     zIndex: '12',
@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
   main: {
     background: '#FFFFFF',
     position: 'relative',
-    zIndex: '3',
+    zIndex: '3'
   },
 
   purpleButton: {
@@ -151,7 +151,9 @@ export default function LandingPage (props) {
       </Parallax>
       <div className={classes.main}>
         <div className={classes.container}>
-          <ProductSection />
+          <Suspense fallback={<div>Loading...</div>}>
+            <ProductSection />
+          </Suspense>
         </div>
       </div>
       <Footer />
