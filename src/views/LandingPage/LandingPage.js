@@ -40,13 +40,13 @@ const useStyles = makeStyles(theme => ({
     color: '#4B0082',
     textDecoration: 'none',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem'
-    },
-    [theme.breakpoints.up('md')]: {
       fontSize: '2rem'
     },
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up('md')]: {
       fontSize: '3rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '3.5rem'
     }
   },
   subtitle: {
@@ -55,13 +55,13 @@ const useStyles = makeStyles(theme => ({
     margin: '10px 0',
     color: '#000000',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '0.8rem'
-    },
-    [theme.breakpoints.up('md')]: {
       fontSize: '1rem'
     },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
+    },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '1.313rem'
+      fontSize: '1.5rem'
     }
   },
   main: {
@@ -78,7 +78,16 @@ const useStyles = makeStyles(theme => ({
   yellowButton: {
     background: '#FFBC42',
     borderRadius: '50px',
-    padding: '12px 30px'
+    padding: '12px 30px',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: 0
+    },
+    [theme.breakpoints.up('md')]: {
+      marginLeft: theme.spacing(1)
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginLeft: theme.spacing(1)
+    }
   },
   yellowChip: {
     color: '#FFBC42',

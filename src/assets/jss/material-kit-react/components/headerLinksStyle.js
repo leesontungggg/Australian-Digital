@@ -37,7 +37,7 @@ const headerLinksStyle = theme => ({
     padding: "0 !important"
   },
   navLink: {
-    color: "#000000",
+    color: "#4B0082",
     position: "relative",
     padding: "0.9375rem",
     fontWeight: "400",
@@ -52,7 +52,7 @@ const headerLinksStyle = theme => ({
     boxShadow:'none',
     
     "&:hover,&:focus": {
-      color: "#4B0082",
+      color: "#FFBC42",
       background: "rgba(200, 200, 200, 0.2)"
     },
     [theme.breakpoints.down("sm")]: {

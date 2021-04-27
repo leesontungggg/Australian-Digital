@@ -25,13 +25,13 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     color: '#4B0082',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem'
-    },
-    [theme.breakpoints.up('md')]: {
       fontSize: '2rem'
     },
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up('md')]: {
       fontSize: '3rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '3.5rem'
     }
   },
   subtitle: {
@@ -40,13 +40,13 @@ const useStyles = makeStyles(theme => ({
     margin: '10px 0',
     color: '#000000',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '0.8rem'
-    },
-    [theme.breakpoints.up('md')]: {
       fontSize: '1rem'
     },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
+    },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '1.313rem'
+      fontSize: '1.5rem'
     }
   },
   description: {
@@ -107,13 +107,13 @@ const useStyles = makeStyles(theme => ({
     margin: '10px 0',
     color: '#000000',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '0.8rem'
-    },
-    [theme.breakpoints.up('md')]: {
       fontSize: '1rem'
     },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
+    },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '1.313rem'
+      fontSize: '1.5rem'
     }
   },
   contactPhone: {
@@ -123,13 +123,13 @@ const useStyles = makeStyles(theme => ({
     margin: '10px 0',
     color: '#000000',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '0.8rem'
-    },
-    [theme.breakpoints.up('md')]: {
       fontSize: '1rem'
     },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
+    },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '1.313rem'
+      fontSize: '1.5rem'
     }
   }
 }))
@@ -151,7 +151,7 @@ export default function ProductSection () {
           <Chip label='ABOUT US' className={classes.yellowChip} />
           <h2 className={classes.title}>
             About <br />
-            Australian <br />
+            Australian 
             Digital
           </h2>
           <h5 className={classes.subtitle}>
