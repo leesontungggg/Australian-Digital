@@ -25,11 +25,10 @@ import {
   roseColor,
   transition,
   boxShadow,
-  drawerWidth
+  drawerWidth,
 } from "assets/jss/material-kit-react.js";
 
-
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   appBar: {
     display: "flex",
     border: "0",
@@ -46,15 +45,15 @@ const useStyles = makeStyles(theme => ({
     flexFlow: "row nowrap",
     justifyContent: "flex-start",
     position: "relative",
-    zIndex: "unset"
+    zIndex: "unset",
   },
   absolute: {
     position: "absolute",
-    zIndex: "1100"
+    zIndex: "1100",
   },
   fixed: {
     position: "fixed",
-    zIndex: "1100"
+    zIndex: "1100",
   },
   container: {
     ...container,
@@ -63,10 +62,10 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     justifyContent: "space-between",
     display: "flex",
-    flexWrap: "nowrap"
+    flexWrap: "nowrap",
   },
   flex: {
-    flex: 1
+    flex: 1,
   },
   title: {
     ...defaultFont,
@@ -79,8 +78,8 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: "unset",
     "&:hover,&:focus": {
       color: "inherit",
-      background: "transparent"
-    }
+      background: "transparent",
+    },
   },
   title_img: {
     ...defaultFont,
@@ -93,70 +92,70 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: "unset",
     "&:hover,&:focus": {
       color: "inherit",
-      background: "transparent"
+      background: "transparent",
     },
-    width:"100%",
+    width: "100%",
     maxWidth: 160,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       maxWidth: 200,
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       maxWidth: 300,
     },
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up("lg")]: {
       maxWidth: 400,
-    }
+    },
   },
   appResponsive: {
-    margin: "20px 10px"
+    margin: "20px 10px",
   },
   primary: {
     backgroundColor: primaryColor,
     color: "#FFFFFF",
     boxShadow:
-      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(156, 39, 176, 0.46)"
+      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(156, 39, 176, 0.46)",
   },
   info: {
     backgroundColor: infoColor,
     color: "#FFFFFF",
     boxShadow:
-      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(0, 188, 212, 0.46)"
+      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(0, 188, 212, 0.46)",
   },
   success: {
     backgroundColor: successColor,
     color: "#FFFFFF",
     boxShadow:
-      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(76, 175, 80, 0.46)"
+      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(76, 175, 80, 0.46)",
   },
   warning: {
     backgroundColor: warningColor,
     color: "#FFFFFF",
     boxShadow:
-      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(255, 152, 0, 0.46)"
+      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(255, 152, 0, 0.46)",
   },
   danger: {
     backgroundColor: dangerColor,
     color: "#FFFFFF",
     boxShadow:
-      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(244, 67, 54, 0.46)"
+      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(244, 67, 54, 0.46)",
   },
   rose: {
     backgroundColor: roseColor,
     color: "#FFFFFF",
     boxShadow:
-      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(233, 30, 99, 0.46)"
+      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(233, 30, 99, 0.46)",
   },
   transparent: {
     backgroundColor: "transparent !important",
     boxShadow: "none",
     // paddingTop: "25px",
-    color: "#FFFFFF"
+    color: "#FFFFFF",
   },
   dark: {
     color: "#FFFFFF",
     backgroundColor: "#212121 !important",
     boxShadow:
-      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(33, 33, 33, 0.46)"
+      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(33, 33, 33, 0.46)",
   },
   white: {
     border: "0",
@@ -165,7 +164,7 @@ const useStyles = makeStyles(theme => ({
     color: "#555",
     backgroundColor: "#fff !important",
     boxShadow:
-      "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)"
+      "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)",
   },
   drawerPaper: {
     border: "none",
@@ -187,9 +186,9 @@ const useStyles = makeStyles(theme => ({
     textAlign: "left",
     paddingRight: "0px",
     paddingLeft: "0",
-    ...transition
-  }
-}))
+    ...transition,
+  },
+}));
 
 export default function Header(props) {
   const classes = useStyles();
@@ -231,9 +230,18 @@ export default function Header(props) {
     [classes.appBar]: true,
     [classes[color]]: color,
     [classes.absolute]: absolute,
-    [classes.fixed]: fixed
+    [classes.fixed]: fixed,
   });
-  const brandComponent = <a href="/"><img href="/" alt="Australian Digital" className={classes.title_img} src={require("assets/australian-digital/2020/12/350xl.png")}></img></a>;
+  const brandComponent = (
+    <a href="/">
+      <img
+        href="/"
+        alt="Australian Digital"
+        className={classes.title_img}
+        src={require("assets/australian-digital/2020/12/350xl.png")}
+      ></img>
+    </a>
+  );
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>
@@ -266,7 +274,7 @@ export default function Header(props) {
           anchor={"right"}
           open={mobileOpen}
           classes={{
-            paper: classes.drawerPaper
+            paper: classes.drawerPaper,
           }}
           onClose={handleDrawerToggle}
         >
@@ -281,7 +289,7 @@ export default function Header(props) {
 }
 
 Header.defaultProp = {
-  color: "white"
+  color: "white",
 };
 
 Header.propTypes = {
@@ -294,7 +302,7 @@ Header.propTypes = {
     "transparent",
     "white",
     "rose",
-    "dark"
+    "dark",
   ]),
   rightLinks: PropTypes.node,
   leftLinks: PropTypes.node,
@@ -318,7 +326,7 @@ Header.propTypes = {
       "transparent",
       "white",
       "rose",
-      "dark"
-    ]).isRequired
-  })
+      "dark",
+    ]).isRequired,
+  }),
 };
