@@ -43,10 +43,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "2rem",
     },
     [theme.breakpoints.up("md")]: {
-      fontSize: "3rem",
+      fontSize: "2.5rem",
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "3.5rem",
+      fontSize: "3rem",
     },
   },
   subtitle: {
@@ -128,11 +128,10 @@ export default function LandingPage(props) {
                 className={classes.yellowChip}
               />
               <h1 className={classes.title}>
-                We Provide Salesforce <br /> Consultancy
+                Salesforce Partner Providing Salesforce and Marketing Automation Consultancy
               </h1>
               <h4 className={classes.subtitle}>
-                Consultancy, system implementation and enhancement, managed
-                services and solutions to perfect your customer experience.
+                Salesforce, Pardot and Salesforce Marketing Cloud Consultancy. System implementation and Enhancement, managed Services and solutions to provide a rich lead pipeline and excellent customer experiences.
               </h4>
               <br />
               <Button

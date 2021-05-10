@@ -54,7 +54,7 @@ export default function HeaderLinks (props) {
 
       <ListItem className={classes.listItem}>
         <Button href="/service" className={classes.navLink}>
-          Service
+          Services
         </Button>
       </ListItem>
 

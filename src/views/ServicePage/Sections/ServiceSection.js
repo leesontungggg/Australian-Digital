@@ -99,6 +99,10 @@ const useStyles = makeStyles(theme => ({
   contact: {
     marginTop: '100px'
   },
+  contactAddressContainer: {
+    display: 'flex',
+    alignItems: 'center'
+  },
   contactAddress: {
     textAlign: 'start',
     fontSize: '1.313rem',
@@ -297,7 +301,13 @@ export default function ServiceSection () {
       <div className={classes.contact}>
         <h2 className={classes.title}>CONTACT US</h2>
         <GridContainer justify='center'>
-          <GridItem xs={12} sm={6} md={6} lg={6}>
+          <GridItem
+            className={classes.contactAddressContainer}
+            xs={12}
+            sm={6}
+            md={6}
+            lg={6}
+          >
             <h4 className={classes.contactAddress}>
               PO Box 889, Neutral Bay,
               <br /> NSW, 2089,
@@ -305,7 +315,11 @@ export default function ServiceSection () {
             </h4>
           </GridItem>
           <GridItem xs={12} sm={6} md={6} lg={6}>
-            <h4 className={classes.contactPhone}>+61 404 852 274</h4>
+            <h4 className={classes.contactPhone}>
+              Monday to Friday 8AM to 6PM
+              <br />
+              Saturday 9AM to 1PM <br /> (Certainly for phone) +61 404 852 274
+            </h4>
             <h4 className={classes.contactPhone}>
               enquiry@australian-digital.com
             </h4>

@@ -12,11 +12,21 @@ import * as yup from 'yup'
 import Button from 'components/CustomButtons/Button.js'
 import TextField from '@material-ui/core/TextField'
 
-const validationSchema = yup.object({
+const validationSchema = yup.object().shape({
+  first_name: yup
+    .string('Enter your first name')
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
   email: yup
     .string('Enter your email')
     .email('Enter a valid email')
-    .required('Email is required')
+    .required('Email is required'),
+  phone: yup
+    .number('Enter a valid number')
+    .required('Enter your phone number')
+    .typeError('You must specify a number')
+    .min(3, 'Too Short!')
 })
 
 const useStyles = makeStyles(theme => ({
@@ -44,7 +54,7 @@ const useStyles = makeStyles(theme => ({
   },
   formTitle: {
     ...title,
-    marginTop: '16px',
+    marginTop: '8px',
     minHeight: '32px',
     textDecoration: 'none',
     position: 'relative',
@@ -53,10 +63,10 @@ const useStyles = makeStyles(theme => ({
       fontSize: '2rem'
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: '3rem'
+      fontSize: '2.3rem'
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '3.5rem'
+      fontSize: '2.5rem'
     }
   },
   subtitle: {
@@ -103,7 +113,20 @@ const useStyles = makeStyles(theme => ({
       fontSize: '1.2rem'
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '1.5rem'
+      fontSize: '1.3rem'
+    }
+  },
+  whiteSuccessButton: {
+    color: '#FFBC42',
+
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1rem'
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '1.3rem'
     }
   },
   services: {
@@ -139,6 +162,10 @@ const useStyles = makeStyles(theme => ({
   },
   contact: {
     marginTop: '100px'
+  },
+  contactAddressContainer: {
+    display: 'flex',
+    alignItems: 'center'
   },
   contactAddress: {
     textAlign: 'start',
@@ -271,9 +298,7 @@ export default function ContactSection () {
   const [isSuccess, setIsSuccess] = useState(false)
 
   const formik = useFormik({
-    initialValues: {
-      
-    },
+    initialValues: {},
     validationSchema: validationSchema,
     onSubmit: values => {
       values.oid = '00D5g000004Q7r1'
@@ -281,17 +306,20 @@ export default function ContactSection () {
       values['00N5g000006oAit'] = 'Australian Digital'
       values.lead_source = 'Web'
 
-      fetch(
-        'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8',
-        {
-          method: 'POST',
-          mode: 'no-cors',
-          body: new URLSearchParams(values)
-        }
-      ).then(function (response) {
-        console.log(response)
-        setIsSuccess(true)
-      })
+      console.log(values)
+      setIsSuccess(true)
+
+      // fetch(
+      //   'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8',
+      //   {
+      //     method: 'POST',
+      //     mode: 'no-cors',
+      //     body: new URLSearchParams(values)
+      //   }
+      // ).then(function (response) {
+      //   console.log(response)
+      //   setIsSuccess(true)
+      // })
     }
   })
 
@@ -320,9 +348,9 @@ export default function ContactSection () {
         <form onSubmit={formik.handleSubmit}>
           <GridContainer className={classes.formContainer} justify='center'>
             <GridItem xs={12} sm={12} md={12} lg={12}>
-              <h3 className={classes.formTitle}>Contact Form</h3>
+              <h4 className={classes.formTitle}>Please get in touch<br/> and let us know how we can help</h4>
             </GridItem>
-            <GridItem xs={12} sm={6} md={6} lg={6}>
+            <GridItem xs={12} sm={12} md={12} lg={12}>
               <TextField
                 className={classes.textFieldSpacing}
                 fullWidth
@@ -331,10 +359,16 @@ export default function ContactSection () {
                 name='first_name'
                 label='First Name'
                 onChange={formik.handleChange}
+                error={
+                  formik.touched.first_name && Boolean(formik.errors.first_name)
+                }
+                helperText={
+                  formik.touched.first_name && formik.errors.first_name
+                }
                 autoComplete='off'
               />
             </GridItem>
-            <GridItem xs={12} sm={6} md={6} lg={6}>
+            <GridItem xs={12} sm={12} md={12} lg={12}>
               <TextField
                 className={classes.textFieldSpacing}
                 fullWidth
@@ -343,10 +377,14 @@ export default function ContactSection () {
                 name='last_name'
                 label='Last Name'
                 onChange={formik.handleChange}
+                error={
+                  formik.touched.last_name && Boolean(formik.errors.last_name)
+                }
+                helperText={formik.touched.last_name && formik.errors.last_name}
                 autoComplete='off'
               />
             </GridItem>
-            <GridItem xs={12} sm={6} md={6} lg={6}>
+            <GridItem xs={12} sm={12} md={12} lg={12}>
               <TextField
                 className={classes.textFieldSpacing}
                 fullWidth
@@ -358,7 +396,7 @@ export default function ContactSection () {
                 autoComplete='off'
               />
             </GridItem>
-            <GridItem xs={12} sm={6} md={6} lg={6}>
+            <GridItem xs={12} sm={12} md={12} lg={12}>
               <TextField
                 className={classes.textFieldSpacing}
                 fullWidth
@@ -372,7 +410,21 @@ export default function ContactSection () {
                 autoComplete='off'
               />
             </GridItem>
-            <GridItem xs={12} sm={6} md={6} lg={6}>
+            <GridItem xs={12} sm={12} md={12} lg={12}>
+              <TextField
+                className={classes.textFieldSpacing}
+                fullWidth
+                variant='outlined'
+                id='phone'
+                name='phone'
+                label='Phone'
+                onChange={formik.handleChange}
+                error={formik.touched.phone && Boolean(formik.errors.phone)}
+                helperText={formik.touched.phone && formik.errors.phone}
+                autoComplete='off'
+              />
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12} lg={12}>
               <TextField
                 className={classes.textFieldSpacing}
                 fullWidth
@@ -384,104 +436,21 @@ export default function ContactSection () {
                 autoComplete='off'
               />
             </GridItem>
-            {/* <GridItem xs={12} sm={6} md={6} lg={6}>
-              <TextField
-                className={classes.textFieldSpacing}
-                fullWidth
-                variant='outlined'
-                id='city'
-                name='city'
-                label='City'
-                onChange={formik.handleChange}
-                autoComplete='off'
-              />
-            </GridItem> */}
-            {/* <GridItem xs={12} sm={6} md={6} lg={6}>
-              <TextField
-                className={classes.textFieldSpacing}
-                fullWidth
-                variant='outlined'
-                id='state'
-                name='state'
-                label='State/Province'
-                onChange={formik.handleChange}
-                autoComplete='off'
-              />
-            </GridItem> */}
-            <GridItem xs={12} sm={6} md={6} lg={6}>
+            <GridItem xs={12} sm={12} md={12} lg={12}>
               <TextField
                 className={classes.textFieldSpacing}
                 fullWidth
                 variant='outlined'
                 id='description'
                 name='description'
-                label='Description'
+                label='How can we help?'
                 onChange={formik.handleChange}
                 autoComplete='off'
               />
             </GridItem>
-            {/* <GridItem xs={12} sm={6} md={6} lg={6}>
-              <TextField
-                className={classes.textFieldSpacing}
-                fullWidth
-                select
-                variant='outlined'
-                id='00N5g000006oAit'
-                name='00N5g000006oAit'
-                label='Business'
-                onChange={formik.handleChange}
-                autoComplete='off'
-                value={'Australian Digital'}
-              >
-                <MenuItem value={'Australian Digital'}>
-                  Australian Digital
-                </MenuItem>
-                <MenuItem value={'Global Aspects'}>Global Aspects</MenuItem>
-              </TextField>
-            </GridItem> */}
-
-            {/* <GridItem xs={12} sm={6} md={6} lg={6}>
-              <TextField
-                className={classes.textFieldSpacing}
-                fullWidth
-                select
-                variant='outlined'
-                id='lead_source'
-                name='lead_source'
-                label='Lead Source'
-                onChange={formik.handleChange}
-                autoComplete='off'
-              >
-                <MenuItem value={'Advertisement'}>Advertisement</MenuItem>
-                <MenuItem value={'Employee Referral'}>
-                  Employee Referral
-                </MenuItem>
-                <MenuItem value={'External Referral'}>
-                  External Referral
-                </MenuItem>
-                <MenuItem value={'Partner'}>Partner</MenuItem>
-                <MenuItem value={'Public Relations'}>Public Relations</MenuItem>
-                <MenuItem value={'Seminar - Internal'}>
-                  Seminar - Internal
-                </MenuItem>
-                <MenuItem value={'Seminar - Partner'}>
-                  Seminar - Partner
-                </MenuItem>
-                <MenuItem value={'Trade Show'}>Trade Show</MenuItem>
-                <MenuItem value={'Web'}>Web</MenuItem>
-                <MenuItem value={'Word of mouth'}>Word of mouth</MenuItem>
-                <MenuItem value={'Other'}>Other</MenuItem>
-                <MenuItem value={'Australian Digital Website'}>
-                  Australian Digital Website
-                </MenuItem>
-                <MenuItem value={'Global Aspects Website'}>
-                  Global Aspects Website
-                </MenuItem>
-              </TextField>
-            </GridItem> */}
             <GridItem xs={12} sm={12} md={12} lg={12}>
               <Button
-                disabled
+                disabled={isSuccess}
                 className={classes.yellowSubmitButton}
                 variant='contained'
                 type='submit'
@@ -497,8 +466,12 @@ export default function ContactSection () {
                 sm={12}
                 md={12}
                 lg={12}
+                className={classes.whiteSuccessButton}
               >
-                <h4>Successfully Submitted!</h4>
+                <h4>
+                  Thank you for your enquiry. We look forward to working with
+                  you.
+                </h4>
               </GridItem>
             ) : null}
           </GridContainer>
@@ -506,9 +479,15 @@ export default function ContactSection () {
       </div>
 
       <div className={classes.contact}>
-        <h2 className={classes.title}>OUR CONTACTS</h2>
+        <h2 className={classes.title}>OUR CONTACT DETAILS</h2>
         <GridContainer justify='center'>
-          <GridItem xs={12} sm={6} md={6} lg={6}>
+          <GridItem
+            className={classes.contactAddressContainer}
+            xs={12}
+            sm={6}
+            md={6}
+            lg={6}
+          >
             <h4 className={classes.contactAddress}>
               PO Box 889, Neutral Bay,
               <br /> NSW, 2089,
@@ -517,7 +496,9 @@ export default function ContactSection () {
           </GridItem>
           <GridItem xs={12} sm={6} md={6} lg={6}>
             <h4 className={classes.contactPhone}>
-              +61 404 852 274
+              Monday to Friday 8AM to 6PM
+              <br />
+              Saturday 9AM to 1PM <br /> (Certainly for phone) +61 404 852 274
             </h4>
             <h4 className={classes.contactPhone}>
               enquiry@australian-digital.com

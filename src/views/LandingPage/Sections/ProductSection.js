@@ -100,6 +100,10 @@ const useStyles = makeStyles(theme => ({
   contact: {
     marginTop: '100px'
   },
+  contactAddressContainer: {
+    display: 'flex',
+    alignItems: 'center'
+  },
   contactAddress: {
     textAlign: 'start',
     fontSize: '1.313rem',
@@ -138,7 +142,7 @@ export default function ProductSection () {
   const classes = useStyles()
   return (
     <div className={classes.section}>
-      <GridContainer justify='center'>
+      {/* <GridContainer justify='center'>
         <GridItem xs={12} sm={6} md={6} lg={6}>
           <img
             alt='Australian Digital'
@@ -169,7 +173,7 @@ export default function ProductSection () {
             ABOUT US
           </Button>
         </GridItem>
-      </GridContainer>
+      </GridContainer> */}
       <div className={classes.services}>
         <Chip label='SERVICES' className={classes.yellowChip} />
         <h2 className={classes.title}>WHAT CAN WE DO FOR YOU?</h2>
@@ -267,7 +271,7 @@ export default function ProductSection () {
           <Button
             color='#4B0082'
             size='lg'
-            href="/service"
+            href='/service'
             rel='noopener noreferrer'
             className={classes.purpleButton}
           >
@@ -330,7 +334,13 @@ export default function ProductSection () {
       <div className={classes.contact}>
         <h2 className={classes.title}>CONTACT US</h2>
         <GridContainer justify='center'>
-          <GridItem xs={12} sm={6} md={6} lg={6}>
+          <GridItem
+            className={classes.contactAddressContainer}
+            xs={12}
+            sm={6}
+            md={6}
+            lg={6}
+          >
             <h4 className={classes.contactAddress}>
               PO Box 889, Neutral Bay,
               <br /> NSW, 2089,
@@ -338,7 +348,11 @@ export default function ProductSection () {
             </h4>
           </GridItem>
           <GridItem xs={12} sm={6} md={6} lg={6}>
-            <h4 className={classes.contactPhone}>+61 404 852 274</h4>
+            <h4 className={classes.contactPhone}>
+              Monday to Friday 8AM to 6PM
+              <br />
+              Saturday 9AM to 1PM <br /> (Certainly for phone) +61 404 852 274
+            </h4>
             <h4 className={classes.contactPhone}>
               enquiry@australian-digital.com
             </h4>
