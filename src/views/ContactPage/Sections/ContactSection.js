@@ -272,7 +272,7 @@ export default function ContactSection () {
 
   const formik = useFormik({
     initialValues: {
-      email: 'foobar@example.com'
+      
     },
     validationSchema: validationSchema,
     onSubmit: values => {
