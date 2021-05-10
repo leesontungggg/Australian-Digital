@@ -481,6 +481,7 @@ export default function ContactSection () {
             </GridItem> */}
             <GridItem xs={12} sm={12} md={12} lg={12}>
               <Button
+                disabled
                 className={classes.yellowSubmitButton}
                 variant='contained'
                 type='submit'
