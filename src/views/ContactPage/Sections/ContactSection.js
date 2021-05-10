@@ -306,20 +306,20 @@ export default function ContactSection () {
       values['00N5g000006oAit'] = 'Australian Digital'
       values.lead_source = 'Web'
 
-      console.log(values)
-      setIsSuccess(true)
+      // console.log(values)
+      // setIsSuccess(true)
 
-      // fetch(
-      //   'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8',
-      //   {
-      //     method: 'POST',
-      //     mode: 'no-cors',
-      //     body: new URLSearchParams(values)
-      //   }
-      // ).then(function (response) {
-      //   console.log(response)
-      //   setIsSuccess(true)
-      // })
+      fetch(
+        'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8',
+        {
+          method: 'POST',
+          mode: 'no-cors',
+          body: new URLSearchParams(values)
+        }
+      ).then(function (response) {
+        console.log(response)
+        setIsSuccess(true)
+      })
     }
   })
 
