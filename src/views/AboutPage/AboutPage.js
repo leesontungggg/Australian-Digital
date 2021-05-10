@@ -67,10 +67,10 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: "1rem",
     },
     [theme.breakpoints.up("md")]: {
-      paddingTop: "10rem",
+      paddingTop: "6rem",
     },
     [theme.breakpoints.up("lg")]: {
-      paddingTop: "16rem",
+      paddingTop: "10rem",
     },
   },
 
@@ -106,7 +106,7 @@ export default function AboutPage(props) {
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
-          height: 400,
+          height: 100,
           color: "black",
         }}
         {...rest}
