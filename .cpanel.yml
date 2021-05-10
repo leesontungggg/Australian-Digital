@@ -2,4 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ahz6a9gs7nwy/public_html/
-    - /bin/cp -R build/* $DEPLOYPATH
+    - cd /home/ahz6a9gs7nwy/repositories/Australian-Digital/build
+    - /bin/cp -R * $DEPLOYPATH
