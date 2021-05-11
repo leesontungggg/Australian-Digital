@@ -80,8 +80,17 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center'
   },
   servicesIcon: {
-    width: '60px',
-    height: '60px'
+    width: 'auto',
+
+    [theme.breakpoints.down('sm')]: {
+      height: '100px'
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '120px'
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: '130px'
+    }
   },
   whycustomer: {
     marginTop: '100px'
@@ -180,13 +189,12 @@ export default function ProductSection () {
         <GridContainer className={classes.servicesGrid}>
           <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
             <InfoArea
-              title='Salesforce consultancy'
-              description='We provide expertise on the Salesforce Platform whether you are looking to implement Sales Cloud, increase your Salesforce foot print with Service Cloud or add a customer or partner Community.'
+              title='Pardot'
               src={
                 <img
                   alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic.webp')}
+                  src={require('assets/img/sfic1.webp')}
                 ></img>
               }
               iconColor='info'
@@ -195,13 +203,12 @@ export default function ProductSection () {
           </GridItem>
           <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
             <InfoArea
-              title='System Integration'
-              description='We are highly experienced at designing and building integrations between Salesforce and many other platforms. We are also highly accomplished at migrating data into new and existing Salesforce orgs.'
+              title='Salesforce Marketing Cloud'
               src={
                 <img
                   alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic2.webp')}
+                  src={require('assets/img/sfic2.webp')}
                 ></img>
               }
               iconColor='info'
@@ -210,13 +217,12 @@ export default function ProductSection () {
           </GridItem>
           <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
             <InfoArea
-              title='Data Archiving Strategy and Design'
-              description='We design and build Salesforce archiving solutions to prevent excess data conversations and costs and maximize the health and performance of your org.'
+              title='Service Cloud'
               src={
                 <img
                   alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic3-min.webp')}
+                  src={require('assets/img/sfic3.webp')}
                 ></img>
               }
               iconColor='info'
@@ -225,13 +231,12 @@ export default function ProductSection () {
           </GridItem>
           <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
             <InfoArea
-              title='Salesforce Custom Developments'
-              description='Although we strive for clicks not code where-ever possible we are also have highly experienced developers to build custom components, processes and Salesforce integrations.'
+              title='Service Cloud Voice'
               src={
                 <img
                   alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic4-min.webp')}
+                  src={require('assets/img/sfic4.webp')}
                 ></img>
               }
               iconColor='info'
@@ -240,13 +245,12 @@ export default function ProductSection () {
           </GridItem>
           <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
             <InfoArea
-              title='Salesforce Admin Support'
-              description='We provide a highly efficient admin support service which allows you to focus on doing what you do best. Running your business and growing your highly engaged customer base.'
+              title='Sales Cloud'
               src={
                 <img
                   alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic5-min.webp')}
+                  src={require('assets/img/sfic5.webp')}
                 ></img>
               }
               iconColor='info'
@@ -255,13 +259,40 @@ export default function ProductSection () {
           </GridItem>
           <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
             <InfoArea
-              title='Salesforce Improvements'
-              description='We are able to design and build improvements to your existing Salesforce org. Please talk to us about what we can improve for you.'
+              title='Salesforce Custom Development'
               src={
                 <img
                   alt='Australian Digital'
                   className={classes.servicesIcon}
-                  src={require('assets/img/ic6-min.webp')}
+                  src={require('assets/img/sfic6.webp')}
+                ></img>
+              }
+              iconColor='info'
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
+            <InfoArea
+              title='Integration Design and Build'
+              src={
+                <img
+                  alt='Australian Digital'
+                  className={classes.servicesIcon}
+                  src={require('assets/img/sfic7.webp')}
+                ></img>
+              }
+              iconColor='info'
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
+            <InfoArea
+              title='Custom Application Design and Build'
+              src={
+                <img
+                  alt='Australian Digital'
+                  className={classes.servicesIcon}
+                  src={require('assets/img/sfic8.webp')}
                 ></img>
               }
               iconColor='info'
