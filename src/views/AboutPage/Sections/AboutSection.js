@@ -24,30 +24,30 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     position: 'relative',
     color: '#4B0082',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '2rem'
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1rem",
     },
-    [theme.breakpoints.up('md')]: {
-      fontSize: '3rem'
+    [theme.breakpoints.up("md")]: {
+      fontSize: "2rem",
     },
-    [theme.breakpoints.up('lg')]: {
-      fontSize: '3.5rem'
-    }
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "3rem",
+    },
   },
   subtitle: {
     fontSize: '1.313rem',
     maxWidth: '500px',
     margin: '10px 0',
-    color: '#000000',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem'
+    color: '#032d60',
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "0.8rem",
     },
-    [theme.breakpoints.up('md')]: {
-      fontSize: '1.2rem'
+    [theme.breakpoints.up("md")]: {
+      fontSize: "1rem",
     },
-    [theme.breakpoints.up('lg')]: {
-      fontSize: '1.5rem'
-    }
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "1.313rem",
+    },
   },
   description: {
     color: '#999'
@@ -109,7 +109,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: '1.313rem',
     maxWidth: '500px',
     margin: '10px 0',
-    color: '#000000',
+    color: '#032d60',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1rem'
     },
@@ -125,7 +125,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: '1.313rem',
     maxWidth: '500px',
     margin: '10px 0',
-    color: '#000000',
+    color: '#032d60',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1rem'
     },
@@ -326,34 +326,6 @@ export default function AboutSection () {
               className={classes.productionImage}
               src={require('assets/img/value.webp')}
             ></img>
-          </GridItem>
-        </GridContainer>
-      </div>
-      <div className={classes.contact}>
-        <h2 className={classes.title}>CONTACT US</h2>
-        <GridContainer justify='center'>
-          <GridItem
-            className={classes.contactAddressContainer}
-            xs={12}
-            sm={6}
-            md={6}
-            lg={6}
-          >
-            <h4 className={classes.contactAddress}>
-              PO Box 889, Neutral Bay,
-              <br /> NSW, 2089,
-              <br /> Australia
-            </h4>
-          </GridItem>
-          <GridItem xs={12} sm={6} md={6} lg={6}>
-            <h4 className={classes.contactPhone}>
-              Monday to Friday 8AM to 6PM
-              <br />
-              Saturday 9AM to 1PM <br /> (Certainly for phone) +61 404 852 274
-            </h4>
-            <h4 className={classes.contactPhone}>
-              enquiry@australian-digital.com
-            </h4>
           </GridItem>
         </GridContainer>
       </div>

@@ -51,7 +51,7 @@ const infoStyle = {
   },
   title,
   description: {
-    color: "#000000",
+    color: "#032d60",
     overflow: "hidden",
     marginTop: "0px",
     fontSize: "15px",

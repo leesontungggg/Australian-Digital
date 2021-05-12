@@ -138,7 +138,7 @@ const navPillsStyle = (theme) => ({
     },
   },
   tabContent: {
-    color: "#000000",
+    color: "#032d60",
   },
 });
 

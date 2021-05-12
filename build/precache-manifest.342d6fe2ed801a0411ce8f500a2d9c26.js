@@ -1,47 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9121f9153adfeb252dbef24df22fb849",
+    "revision": "e3392bcd36c507d8899b199805efab08",
     "url": "/index.html"
   },
   {
-    "revision": "9816c8e48afd28209d52",
-    "url": "/static/css/main.fedf132f.chunk.css"
+    "revision": "1188d7e213f32e24e1e1",
+    "url": "/static/css/main.6fda01c8.chunk.css"
   },
   {
-    "revision": "77add5b3e28488b12cc8",
-    "url": "/static/js/0.172cc4ae.chunk.js"
+    "revision": "9ae7ee839a49c94282a8",
+    "url": "/static/js/0.06a0b9d6.chunk.js"
   },
   {
     "revision": "296282803dbbab7aa45884848170fc0c",
-    "url": "/static/js/0.172cc4ae.chunk.js.LICENSE.txt"
+    "url": "/static/js/0.06a0b9d6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "38c40db38a160716dca9",
-    "url": "/static/js/1.c8cef79b.chunk.js"
-  },
-  {
-    "revision": "c251be4e9842592093e0098333b51410",
-    "url": "/static/js/1.c8cef79b.chunk.js.LICENSE.txt"
-  },
-  {
-    "revision": "a0c4d9e89a7a8c21b8d1",
-    "url": "/static/js/10.6c3e5afd.chunk.js"
-  },
-  {
-    "revision": "afb839291127857b4bfa",
-    "url": "/static/js/11.8d1ebf40.chunk.js"
+    "revision": "79a90949e00c73906090",
+    "url": "/static/js/1.7f308986.chunk.js"
   },
   {
     "revision": "c251be4e9842592093e0098333b51410",
-    "url": "/static/js/11.8d1ebf40.chunk.js.LICENSE.txt"
+    "url": "/static/js/1.7f308986.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3333393afed85ad51472",
-    "url": "/static/js/12.7d923d3b.chunk.js"
+    "revision": "351029c5cf706fc8f0f9",
+    "url": "/static/js/10.d06298dd.chunk.js"
   },
   {
-    "revision": "414d393bc78b9b635413",
-    "url": "/static/js/4.82471b6b.chunk.js"
+    "revision": "78c4d91f38179f627bc7",
+    "url": "/static/js/11.48fde788.chunk.js"
+  },
+  {
+    "revision": "29c86fff95d53867877d",
+    "url": "/static/js/12.43ac57b5.chunk.js"
+  },
+  {
+    "revision": "05792d2c2e67d97847f8",
+    "url": "/static/js/4.b86eb3ae.chunk.js"
   },
   {
     "revision": "67906b035ae9648088bb",
@@ -52,36 +48,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/5.a3c90200.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e569ab60d72fcaeef228",
-    "url": "/static/js/6.f8366fb2.chunk.js"
+    "revision": "8d3ac0b1dde8dc383c2a",
+    "url": "/static/js/6.e51d0d1d.chunk.js"
   },
   {
-    "revision": "d73f34bfa141ad124f75",
-    "url": "/static/js/7.be706ec3.chunk.js"
+    "revision": "62f5e5286a2483c60f2e",
+    "url": "/static/js/7.3a289bc1.chunk.js"
   },
   {
-    "revision": "f212058ccbc11cc112a3",
-    "url": "/static/js/8.cbf2f4bb.chunk.js"
+    "revision": "53acf9d700e1f9c20086",
+    "url": "/static/js/8.709dfa30.chunk.js"
   },
   {
-    "revision": "c251be4e9842592093e0098333b51410",
-    "url": "/static/js/8.cbf2f4bb.chunk.js.LICENSE.txt"
+    "revision": "17b99f3342ed33272282",
+    "url": "/static/js/9.17468352.chunk.js"
   },
   {
-    "revision": "ecdd8c2913f123856ab6",
-    "url": "/static/js/9.977788c8.chunk.js"
+    "revision": "1188d7e213f32e24e1e1",
+    "url": "/static/js/main.ce6aedc6.chunk.js"
   },
   {
-    "revision": "9816c8e48afd28209d52",
-    "url": "/static/js/main.c48b08b9.chunk.js"
-  },
-  {
-    "revision": "3b447d48513a48b226a7",
-    "url": "/static/js/runtime-main.f153781c.js"
+    "revision": "036b08a29ce9b30e14e0",
+    "url": "/static/js/runtime-main.08e5fad7.js"
   },
   {
     "revision": "71bfff1c832aafeda98990074e81a81e",
     "url": "/static/media/350xl.71bfff1c.png"
+  },
+  {
+    "revision": "6c9ddaa8a8cfa8df9d612612753d00b2",
+    "url": "/static/media/SalesforceSans-Regular.6c9ddaa8.ttf"
   },
   {
     "revision": "fb8b25b0d16962cde5fca9bdacab1510",
@@ -150,6 +146,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "18b0b472252089c177dcf5811f5d5e68",
     "url": "/static/media/p3-min.18b0b472.jpg"
+  },
+  {
+    "revision": "a6df22e87507c16d4bcb702efd8afeba",
+    "url": "/static/media/salesforce_partner.a6df22e8.webp"
   },
   {
     "revision": "8624450d17619848dd6da15c8b05c40b",

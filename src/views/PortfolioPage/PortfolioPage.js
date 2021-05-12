@@ -8,6 +8,8 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
+import ContactFooter from 'components/ContactFooter/ContactFooter.js'
+
 
 import HeaderLinks from "components/Header/HeaderLinks.js";
 
@@ -49,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.313rem",
     maxWidth: "500px",
     margin: "10px 0",
-    color: "#000000",
+    color: "#032d60",
     [theme.breakpoints.down("sm")]: {
       fontSize: "0.8rem",
     },
@@ -107,6 +109,7 @@ export default function PortfolioPage(props) {
       <div className={classes.main}>
         <div className={classes.container}>
           <PortfolioSection />
+          <ContactFooter />
         </div>
       </div>
       <Footer />
