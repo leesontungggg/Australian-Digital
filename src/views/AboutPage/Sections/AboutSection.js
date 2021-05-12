@@ -24,30 +24,30 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     position: 'relative',
     color: '#4B0082',
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "1rem",
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.5rem'
     },
-    [theme.breakpoints.up("md")]: {
-      fontSize: "2rem",
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.8rem'
     },
-    [theme.breakpoints.up("lg")]: {
-      fontSize: "3rem",
-    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '2rem'
+    }
   },
   subtitle: {
     fontSize: '1.313rem',
     maxWidth: '500px',
     margin: '10px 0',
     color: '#032d60',
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "0.8rem",
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1rem'
     },
-    [theme.breakpoints.up("md")]: {
-      fontSize: "1rem",
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
     },
-    [theme.breakpoints.up("lg")]: {
-      fontSize: "1.313rem",
-    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '1.3rem'
+    }
   },
   description: {
     color: '#999'

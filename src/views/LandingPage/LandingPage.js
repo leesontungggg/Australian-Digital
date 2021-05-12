@@ -66,8 +66,23 @@ const useStyles = makeStyles(theme => ({
     }
   },
   saleforcePartner: {
-    height: '88px',
-    width: 'auto'
+    [theme.breakpoints.down('sm')]: {
+      height: 'auto',
+      width: '200px'
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '88px',
+      width: 'auto'
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: '88px',
+      width: 'auto'
+    }
+  },
+  headerTextContainer: {
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: '100px'
+    },
   },
   main: {
     background: '#FFFFFF',
@@ -100,7 +115,10 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 900
   },
   parallax_background: {
-    backgroundColor: '#ffffff'
+    backgroundColor: '#ffffff',
+    [theme.breakpoints.down('sm')]: {
+      backgroundPosition: '-90%'
+    },
   }
 }))
 
@@ -127,7 +145,7 @@ export default function LandingPage (props) {
       >
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={6} sm={6} md={6}>
+            <GridItem xs={6} sm={6} md={6} className={classes.headerTextContainer}>
               <Chip
                 label='WELCOME TO AUSTRALIAN DIGITAL'
                 className={classes.yellowChip}

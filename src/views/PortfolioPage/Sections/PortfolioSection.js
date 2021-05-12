@@ -22,15 +22,15 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     position: 'relative',
     color: '#4B0082',
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "1rem",
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.5rem'
     },
-    [theme.breakpoints.up("md")]: {
-      fontSize: "2rem",
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.8rem'
     },
-    [theme.breakpoints.up("lg")]: {
-      fontSize: "3rem",
-    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '2rem'
+    }
   },
   subtitle: {
     fontSize: '1.313rem',
@@ -65,7 +65,15 @@ const useStyles = makeStyles(theme => ({
     padding: '12px 30px'
   },
   services: {
-    marginTop: '100px'
+    [theme.breakpoints.down("sm")]: {
+      marginTop: '50px',
+    },
+    [theme.breakpoints.up("md")]: {
+      marginTop: '75px',
+    },
+    [theme.breakpoints.up("lg")]: {
+      marginTop: '100px',
+    },
   },
   serviceRaised: {
     margin: '0px 16px',

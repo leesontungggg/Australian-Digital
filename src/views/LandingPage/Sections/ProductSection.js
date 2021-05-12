@@ -13,7 +13,16 @@ import { title } from 'assets/jss/material-kit-react.js'
 
 const useStyles = makeStyles(theme => ({
   section: {
-    padding: '70px 0',
+    [theme.breakpoints.down('sm')]: {
+      padding: '0 0'
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: '70px 0'
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: '70px 0'
+    },
+
     textAlign: 'center'
   },
   title: {
