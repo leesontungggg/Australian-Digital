@@ -141,6 +141,7 @@ export default function LandingPage (props) {
                 solutions to provide a rich lead pipeline and excellent customer
                 experiences.
               </h4>
+              <br />
               <img
                 className={classes.saleforcePartner}
                 src={require('assets/img/salesforce_partner.webp')}
