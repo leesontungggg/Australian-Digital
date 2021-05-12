@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
       fontSize: '1.8rem'
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '2rem'
+      fontSize: '3rem'
     }
   },
   formTitle: {
