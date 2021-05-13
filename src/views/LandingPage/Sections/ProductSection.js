@@ -85,7 +85,7 @@ const useStyles = makeStyles(theme => ({
     //   '0 -3px 24px 2px rgb(0 0 0 / 5%), 0 6px 30px 5px rgb(0 0 0 / 0%), 0 8px 10px -5px rgb(0 0 0 / 0%)'
   },
   servicesGrid: {
-    // gridGap: '40px 20px',
+    gridGap: '100px 0px',
     justifyContent: 'center',
     marginBottom: '32px'
   },
