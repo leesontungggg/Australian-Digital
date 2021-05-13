@@ -111,10 +111,10 @@ const useStyles = makeStyles(theme => ({
       display: 'none'
     },
     [theme.breakpoints.up('md')]: {
-      display: 'block'
+      display: 'flex'
     },
     [theme.breakpoints.up('lg')]: {
-      display: 'block'
+      display: 'flex'
     }
   },
   servicesIcon: {
