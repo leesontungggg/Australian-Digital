@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
       padding: '0 0'
     },
     [theme.breakpoints.up('md')]: {
-      padding: '70px 0'
+      padding: '40px 0'
     },
     [theme.breakpoints.up('lg')]: {
       padding: '70px 0'
@@ -79,26 +79,55 @@ const useStyles = makeStyles(theme => ({
     marginTop: '100px'
   },
   serviceRaised: {
-    margin: '0px 16px',
-    borderRadius: '24px',
-    boxShadow:
-      '0 -3px 24px 2px rgb(0 0 0 / 5%), 0 6px 30px 5px rgb(0 0 0 / 0%), 0 8px 10px -5px rgb(0 0 0 / 0%)'
+    padding: '0px 16px'
+    // borderRadius: '24px',
+    // boxShadow:
+    //   '0 -3px 24px 2px rgb(0 0 0 / 5%), 0 6px 30px 5px rgb(0 0 0 / 0%), 0 8px 10px -5px rgb(0 0 0 / 0%)'
   },
   servicesGrid: {
-    gridGap: '40px 20px',
-    justifyContent: 'center'
+    // gridGap: '40px 20px',
+    justifyContent: 'center',
+    marginBottom: '32px'
+  },
+  salesforce_diagram_mobile: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    [theme.breakpoints.down('sm')]: {
+      display: 'block'
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'none'
+    },
+    [theme.breakpoints.up('lg')]: {
+      display: 'none'
+    }
+  },
+  salesforce_diagram_desktop: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'block'
+    },
+    [theme.breakpoints.up('lg')]: {
+      display: 'block'
+    }
   },
   servicesIcon: {
     width: 'auto',
 
     [theme.breakpoints.down('sm')]: {
-      height: '100px'
+      height: '70px'
     },
     [theme.breakpoints.up('md')]: {
-      height: '120px'
+      height: '80px'
     },
     [theme.breakpoints.up('lg')]: {
-      height: '130px'
+      height: '100px'
     }
   },
   whycustomer: {
@@ -196,128 +225,160 @@ export default function ProductSection () {
         <Chip label='SERVICES' className={classes.yellowChip} />
         <h2 className={classes.title}>What can we do for you?</h2>
         <GridContainer className={classes.servicesGrid}>
-          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
-            <InfoArea
-              title='Pardot'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/sfic1.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
-            <InfoArea
-              title='Salesforce Marketing Cloud'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/sfic2.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
-            <InfoArea
-              title='Service Cloud'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/sfic3.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
-            <InfoArea
-              title='Service Cloud Voice'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/sfic4.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
-            <InfoArea
-              title='Sales Cloud'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/sfic5.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
-            <InfoArea
-              title='Salesforce Custom Development'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/sfic6.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
-            <InfoArea
-              title='Integration Design and Build'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/sfic7.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
-            <InfoArea
-              title='Custom Application Design and Build'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/sfic8.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <Button
-            color='#4B0082'
-            size='lg'
-            href='/service'
-            rel='noopener noreferrer'
-            className={classes.purpleButton}
+          <GridItem
+            xs={12}
+            sm={12}
+            md={4}
+            className={classes.salesforce_diagram_mobile}
           >
-            VIEW SERVICES
-          </Button>
+            <img
+              src={require('assets/img/salesforce_diagram.webp')}
+              style={{ maxWidth: '100%' }}
+              alt='Australian Digital'
+            ></img>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
+            <InfoArea
+              title='Salesforce consultancy'
+              description='We provide expertise on the Salesforce Platform whether you are looking to implement Sales Cloud, increase your Salesforce foot print with Service Cloud or add a customer or partner Community.'
+              src={
+                <img
+                  alt='Australian Digital'
+                  className={classes.servicesIcon}
+                  src={require('assets/img/ic.webp')}
+                ></img>
+              }
+              iconColor='info'
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
+            <InfoArea
+              title='System Integration'
+              description='We are highly experienced at designing and building integrations between Salesforce and many other platforms. We are also highly accomplished at migrating data into new and existing Salesforce orgs.'
+              src={
+                <img
+                  alt='Australian Digital'
+                  className={classes.servicesIcon}
+                  src={require('assets/img/ic2.webp')}
+                ></img>
+              }
+              iconColor='info'
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
+            <InfoArea
+              title='Data Archiving Strategy and Design'
+              description='We design and build Salesforce archiving solutions to prevent excess data conversations and costs and maximize the health and performance of your org.'
+              src={
+                <img
+                  alt='Australian Digital'
+                  className={classes.servicesIcon}
+                  src={require('assets/img/ic3-min.webp')}
+                ></img>
+              }
+              iconColor='info'
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
+            <InfoArea
+              title='Salesforce Custom Developments'
+              description='Although we strive for clicks not code where-ever possible we are also have highly experienced developers to build custom components, processes and Salesforce integrations.'
+              src={
+                <img
+                  alt='Australian Digital'
+                  className={classes.servicesIcon}
+                  src={require('assets/img/ic4-min.webp')}
+                ></img>
+              }
+              iconColor='info'
+              vertical
+            />
+          </GridItem>
+          <GridItem
+            xs={12}
+            sm={12}
+            md={4}
+            className={classes.salesforce_diagram_desktop}
+          >
+            <img
+              src={require('assets/img/salesforce_diagram.webp')}
+              style={{ maxWidth: '100%' }}
+              alt='Australian Digital'
+            ></img>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
+            <InfoArea
+              title='Salesforce Admin Support'
+              description='We provide a highly efficient admin support service which allows you to focus on doing what you do best. Running your business and growing your highly engaged customer base.'
+              src={
+                <img
+                  alt='Australian Digital'
+                  className={classes.servicesIcon}
+                  src={require('assets/img/ic5-min.webp')}
+                ></img>
+              }
+              iconColor='info'
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
+            <InfoArea
+              title='Salesforce Improvements'
+              description='We are able to design and build improvements to your existing Salesforce org. Please talk to us about what we can improve for you.'
+              src={
+                <img
+                  alt='Australian Digital'
+                  className={classes.servicesIcon}
+                  src={require('assets/img/ic6-min.webp')}
+                ></img>
+              }
+              iconColor='info'
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
+            <InfoArea
+              title='System Health Checks'
+              description='We are able to evaluate the health of your Salesforce org and consult with the team to remediate issues and propose improvements.'
+              src={
+                <img
+                  alt='Australian Digital'
+                  className={classes.servicesIcon}
+                  src={require('assets/img/ic7-min.webp')}
+                ></img>
+              }
+              iconColor='info'
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
+            <InfoArea
+              title='Application Architecture'
+              description='We are able design CRM and business solutions that streamline your business processes and provide the very best customer and user experience.'
+              src={
+                <img
+                  alt='Australian Digital'
+                  className={classes.servicesIcon}
+                  src={require('assets/img/ic8-min.webp')}
+                ></img>
+              }
+              iconColor='info'
+              vertical
+            />
+          </GridItem>
         </GridContainer>
+        <Button
+          color='#4B0082'
+          size='lg'
+          href='/service'
+          rel='noopener noreferrer'
+          className={classes.purpleButton}
+        >
+          VIEW FULL SERVICES
+        </Button>
       </div>
       <div className={classes.whycustomer}>
         <GridContainer justify='center'>

@@ -1,43 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "29f4c98afe30aa76e71150268daa54b3",
+    "revision": "ff823ff03f110a5d4b1f47c2e6b973e0",
     "url": "/index.html"
   },
   {
-    "revision": "1188d7e213f32e24e1e1",
+    "revision": "26ce6c534b400bff741a",
     "url": "/static/css/main.6fda01c8.chunk.css"
   },
   {
-    "revision": "9ae7ee839a49c94282a8",
-    "url": "/static/js/0.06a0b9d6.chunk.js"
+    "revision": "15e372a2e32e56599757",
+    "url": "/static/js/0.7e81ff44.chunk.js"
   },
   {
     "revision": "296282803dbbab7aa45884848170fc0c",
-    "url": "/static/js/0.06a0b9d6.chunk.js.LICENSE.txt"
+    "url": "/static/js/0.7e81ff44.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "79a90949e00c73906090",
-    "url": "/static/js/1.7f308986.chunk.js"
+    "revision": "dbdbc502f07ab7b4f641",
+    "url": "/static/js/1.a96c6be6.chunk.js"
   },
   {
     "revision": "c251be4e9842592093e0098333b51410",
-    "url": "/static/js/1.7f308986.chunk.js.LICENSE.txt"
+    "url": "/static/js/1.a96c6be6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "37bee1c6a3ad2da392c2",
-    "url": "/static/js/10.d830a735.chunk.js"
+    "revision": "6de6afc46aa9f7eb9558",
+    "url": "/static/js/10.b5108a2d.chunk.js"
   },
   {
-    "revision": "77b1ccea63fe752a327e",
-    "url": "/static/js/11.9464a97c.chunk.js"
+    "revision": "46e8ba9f6716d45dd4b6",
+    "url": "/static/js/11.391e0381.chunk.js"
   },
   {
-    "revision": "5d2a0eff43548d7dd399",
-    "url": "/static/js/12.75fe88b8.chunk.js"
+    "revision": "b3b8826709322a4bc163",
+    "url": "/static/js/12.c95c2965.chunk.js"
   },
   {
-    "revision": "05792d2c2e67d97847f8",
-    "url": "/static/js/4.b86eb3ae.chunk.js"
+    "revision": "3578ff4aaa7dc1fb9417",
+    "url": "/static/js/4.e5589e88.chunk.js"
   },
   {
     "revision": "67906b035ae9648088bb",
@@ -48,28 +48,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/5.a3c90200.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8d3ac0b1dde8dc383c2a",
-    "url": "/static/js/6.e51d0d1d.chunk.js"
+    "revision": "05801357c2cb072f3288",
+    "url": "/static/js/6.950b4c92.chunk.js"
   },
   {
-    "revision": "61142c0f3ad200948307",
-    "url": "/static/js/7.bf8a433f.chunk.js"
+    "revision": "6d93671b5a99e8c53a8d",
+    "url": "/static/js/7.f0180ffd.chunk.js"
   },
   {
-    "revision": "383ec929edc708de2c29",
-    "url": "/static/js/8.9c13ed8f.chunk.js"
+    "revision": "3fa9c9e5907281425ad8",
+    "url": "/static/js/8.74e51a87.chunk.js"
   },
   {
-    "revision": "d9a553d3ec2055d1a6bb",
-    "url": "/static/js/9.f7d8170d.chunk.js"
+    "revision": "9bbb997771f27c41dabe",
+    "url": "/static/js/9.24fc3348.chunk.js"
   },
   {
-    "revision": "1188d7e213f32e24e1e1",
-    "url": "/static/js/main.ce6aedc6.chunk.js"
+    "revision": "26ce6c534b400bff741a",
+    "url": "/static/js/main.70a0d856.chunk.js"
   },
   {
-    "revision": "66773e3d175eb736fe5d",
-    "url": "/static/js/runtime-main.08f45a1f.js"
+    "revision": "dec4d6312a93053189c7",
+    "url": "/static/js/runtime-main.d11a02df.js"
   },
   {
     "revision": "71bfff1c832aafeda98990074e81a81e",
@@ -148,40 +148,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/p3-min.18b0b472.jpg"
   },
   {
+    "revision": "829a1eb7965cac612c356ddaa95f2499",
+    "url": "/static/media/salesforce_diagram.829a1eb7.webp"
+  },
+  {
     "revision": "a6df22e87507c16d4bcb702efd8afeba",
     "url": "/static/media/salesforce_partner.a6df22e8.webp"
-  },
-  {
-    "revision": "8624450d17619848dd6da15c8b05c40b",
-    "url": "/static/media/sfic1.8624450d.webp"
-  },
-  {
-    "revision": "8b4668030c788ea190dfaac74013fa54",
-    "url": "/static/media/sfic2.8b466803.webp"
-  },
-  {
-    "revision": "86849be94f3b687d590c3821891e5f77",
-    "url": "/static/media/sfic3.86849be9.webp"
-  },
-  {
-    "revision": "8463330bd747d714d5a2732dc18cab02",
-    "url": "/static/media/sfic4.8463330b.webp"
-  },
-  {
-    "revision": "50b75a687e5adfbb7ac3dc0a10a89ea2",
-    "url": "/static/media/sfic5.50b75a68.webp"
-  },
-  {
-    "revision": "2cfb2d4c5835fccb8bcac9c3e9124535",
-    "url": "/static/media/sfic6.2cfb2d4c.webp"
-  },
-  {
-    "revision": "328704be19cf72ee5ea84d29beb489f1",
-    "url": "/static/media/sfic7.328704be.webp"
-  },
-  {
-    "revision": "624f324bb2cdcb62b91b6b7cd51568af",
-    "url": "/static/media/sfic8.624f324b.webp"
   },
   {
     "revision": "e0ecfd21377568d34e957ce3c1b007e7",
