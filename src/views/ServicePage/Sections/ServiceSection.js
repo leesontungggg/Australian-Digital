@@ -150,7 +150,7 @@ export default function ServiceSection () {
   return (
     <div className={classes.section}>
       <div className={classes.services}>
-        <Chip label='Service' className={classes.yellowChip} />
+        <Chip label='Services' className={classes.yellowChip} />
         <h2 className={classes.title}>What can we do for you?</h2>
         <GridContainer className={classes.servicesGrid}>
           <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
