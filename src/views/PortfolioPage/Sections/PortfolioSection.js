@@ -37,15 +37,15 @@ const useStyles = makeStyles(theme => ({
     maxWidth: '500px',
     margin: '10px 0',
     color: '#032d60',
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "0.8rem",
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.8rem'
     },
-    [theme.breakpoints.up("md")]: {
-      fontSize: "1rem",
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1rem'
     },
-    [theme.breakpoints.up("lg")]: {
-      fontSize: "1.313rem",
-    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '1.313rem'
+    }
   },
   description: {
     color: '#999'
@@ -65,15 +65,15 @@ const useStyles = makeStyles(theme => ({
     padding: '12px 30px'
   },
   services: {
-    [theme.breakpoints.down("sm")]: {
-      marginTop: '50px',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '50px'
     },
-    [theme.breakpoints.up("md")]: {
-      marginTop: '75px',
+    [theme.breakpoints.up('md')]: {
+      marginTop: '75px'
     },
-    [theme.breakpoints.up("lg")]: {
-      marginTop: '100px',
-    },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: '100px'
+    }
   },
   serviceRaised: {
     margin: '0px 16px',
@@ -216,6 +216,34 @@ export default function PortfolioSection () {
             },
             {
               tabButton: 'MARKETING AUTOMATION',
+              tabContent: (
+                <GridContainer justify='center'>
+                  <GridItem xs={12} sm={6} md={4} lg={4}>
+                    <img
+                      alt='Australian Digital'
+                      className={classes.imgPortfolio}
+                      src={require('assets/img/p1-min.jpg')}
+                    ></img>
+                  </GridItem>
+                  <GridItem xs={12} sm={6} md={4} lg={4}>
+                    <img
+                      alt='Australian Digital'
+                      className={classes.imgPortfolio}
+                      src={require('assets/img/p2-min.jpg')}
+                    ></img>
+                  </GridItem>
+                  <GridItem xs={12} sm={6} md={4} lg={4}>
+                    <img
+                      alt='Australian Digital'
+                      className={classes.imgPortfolio}
+                      src={require('assets/img/p3-min.jpg')}
+                    ></img>
+                  </GridItem>
+                </GridContainer>
+              )
+            },
+            {
+              tabButton: 'INDUSTRY EXPERIENCE',
               tabContent: (
                 <GridContainer justify='center'>
                   <GridItem xs={12} sm={6} md={4} lg={4}>
