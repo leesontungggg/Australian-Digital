@@ -106,7 +106,7 @@ export default function ContactFooter (props) {
           <h4 className={classes.contactPhone}>
             Monday to Friday 8AM to 6PM
             <br />
-            Saturday 9AM to 1PM <br /> (Certainly for phone) +61 404 852 274
+            Saturday 9AM to 1PM <br /> +61 404 852 274
           </h4>
           <h4 className={classes.contactPhone}>
             enquiry@australian-digital.com
