@@ -16,6 +16,7 @@ import Parallax from 'components/Parallax/Parallax.js'
 
 import { container, title } from 'assets/jss/material-kit-react.js'
 import Chip from '@material-ui/core/Chip'
+import { useSpring, animated } from 'react-spring'
 
 // Sections for this page
 
@@ -82,7 +83,7 @@ const useStyles = makeStyles(theme => ({
   headerTextContainer: {
     [theme.breakpoints.down('sm')]: {
       paddingTop: '100px'
-    },
+    }
   },
   main: {
     background: '#FFFFFF',
@@ -118,9 +119,11 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#ffffff',
     [theme.breakpoints.down('sm')]: {
       backgroundPosition: '-90%'
-    },
+    }
   }
 }))
+
+const AnimatedParallax = animated(Parallax)
 
 export default function LandingPage (props) {
   const classes = useStyles()
@@ -139,57 +142,102 @@ export default function LandingPage (props) {
         }}
         {...rest}
       />
-      <Parallax
+      <AnimatedParallax
         className={classes.parallax_background}
         image={require('assets/img/landing.webp')}
+        style={useSpring({
+          to: { opacity: 1 },
+          from: { opacity: 0 },
+          delay: 500
+        })}
       >
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={6} sm={6} md={6} className={classes.headerTextContainer}>
-              <Chip
-                label='WELCOME TO AUSTRALIAN DIGITAL'
-                className={classes.yellowChip}
-              />
-              <h1 className={classes.title}>
-                We Provide Salesforce and Marketing Automation Consultancy
-              </h1>
-              <h4 className={classes.subtitle}>
-                Salesforce, Pardot and Salesforce Marketing Cloud Consultancy.
-                System implementation and Enhancement, managed Services and
-                solutions to provide a rich lead pipeline and excellent customer
-                experiences.
-              </h4>
-              <br />
-              <img
-                className={classes.saleforcePartner}
-                src={require('assets/img/salesforce_partner.webp')}
-                alt='Australian Digital'
-              ></img>
-              <br />
-              <br />
-              <Button
-                href='/about'
-                color='#4B0082'
-                size='lg'
-                rel='noopener noreferrer'
-                className={classes.purpleButton}
+            <GridItem
+              xs={6}
+              sm={6}
+              md={6}
+              className={classes.headerTextContainer}
+            >
+              <animated.div
+                style={useSpring({
+                  to: { opacity: 1 },
+                  from: { opacity: 0 },
+                  delay: 1000
+                })}
               >
-                Read more
-              </Button>
+                <Chip
+                  label='WELCOME TO AUSTRALIAN DIGITAL'
+                  className={classes.yellowChip}
+                />
+              </animated.div>
 
-              <Button
-                color='danger'
-                href='/contact'
-                size='lg'
-                rel='noopener noreferrer'
-                className={classes.yellowButton}
+              <animated.div
+                style={useSpring({
+                  to: { opacity: 1 },
+                  from: { opacity: 0 },
+                  delay: 2000
+                })}
               >
-                Contact Us
-              </Button>
+                <h1 className={classes.title}>
+                  We Provide Salesforce and Marketing Automation Consultancy
+                </h1>
+              </animated.div>
+              <animated.div
+                style={useSpring({
+                  to: { opacity: 1 },
+                  from: { opacity: 0 },
+                  delay: 3000
+                })}
+              >
+                <h4 className={classes.subtitle}>
+                  Salesforce, Pardot and Salesforce Marketing Cloud Consultancy.
+                  System implementation and Enhancement, managed Services and
+                  solutions to provide a rich lead pipeline and excellent
+                  customer experiences.
+                </h4>
+              </animated.div>
+
+              <br />
+
+              <animated.div
+                style={useSpring({
+                  to: { opacity: 1 },
+                  from: { opacity: 0 },
+                  delay: 4000
+                })}
+              >
+                <img
+                  className={classes.saleforcePartner}
+                  src={require('assets/img/salesforce_partner.webp')}
+                  alt='Australian Digital'
+                ></img>
+                <br />
+                <br />
+                <Button
+                  href='/about'
+                  color='#4B0082'
+                  size='lg'
+                  rel='noopener noreferrer'
+                  className={classes.purpleButton}
+                >
+                  Read more
+                </Button>
+
+                <Button
+                  color='danger'
+                  href='/contact'
+                  size='lg'
+                  rel='noopener noreferrer'
+                  className={classes.yellowButton}
+                >
+                  Contact Us
+                </Button>
+              </animated.div>
             </GridItem>
           </GridContainer>
         </div>
-      </Parallax>
+      </AnimatedParallax>
       <div className={classes.main}>
         <div className={classes.container}>
           <Suspense fallback={<div>Loading...</div>}>

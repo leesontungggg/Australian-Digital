@@ -10,6 +10,7 @@ import Chip from '@material-ui/core/Chip'
 import Button from 'components/CustomButtons/Button.js'
 
 import { title } from 'assets/jss/material-kit-react.js'
+import { Spring, useSpring, animated } from 'react-spring'
 
 const useStyles = makeStyles(theme => ({
   section: {
@@ -185,42 +186,14 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
+const onChange = isVisible => {
+  console.log(isVisible)
+}
+
 export default function ProductSection () {
   const classes = useStyles()
   return (
     <div className={classes.section}>
-      {/* <GridContainer justify='center'>
-        <GridItem xs={12} sm={6} md={6} lg={6}>
-          <img
-            alt='Australian Digital'
-            className={classes.productionImage}
-            src={require('assets/img/about-min.webp')}
-          ></img>
-        </GridItem>
-
-        <GridItem xs={12} sm={6} md={6} lg={6}>
-          <Chip label='ABOUT US' className={classes.yellowChip} />
-          <h2 className={classes.title}>
-            About <br />
-            Australian Digital
-          </h2>
-          <h5 className={classes.subtitle}>
-            We are a boutique Salesforce consultancy based in Sydney Australia.
-            Our consultants all have multiple Salesforce certifications and have
-            an excellent grasp of business and deep expertise and enthusiasm for
-            the Salesforce platform.
-          </h5>
-          <Button
-            color='#4B0082'
-            href='/about'
-            size='lg'
-            rel='noopener noreferrer'
-            className={classes.purpleButton}
-          >
-            ABOUT US
-          </Button>
-        </GridItem>
-      </GridContainer> */}
       <div className={classes.services}>
         <Chip label='SERVICES' className={classes.yellowChip} />
         <h2 className={classes.title}>What can we do for you?</h2>
@@ -380,6 +353,7 @@ export default function ProductSection () {
           VIEW FULL SERVICES
         </Button>
       </div>
+
       <div className={classes.whycustomer}>
         <GridContainer justify='center'>
           <GridItem xs={12} sm={6} md={6} lg={6}>
