@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -10,7 +10,8 @@ import Chip from '@material-ui/core/Chip'
 import Button from 'components/CustomButtons/Button.js'
 
 import { title } from 'assets/jss/material-kit-react.js'
-import { Spring, useSpring, animated } from 'react-spring'
+import { Spring, animated } from 'react-spring'
+import { InView } from 'react-intersection-observer'
 
 const useStyles = makeStyles(theme => ({
   section: {
@@ -186,226 +187,329 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const onChange = isVisible => {
-  console.log(isVisible)
-}
-
 export default function ProductSection () {
   const classes = useStyles()
+
+  const [showService, setShowService] = useState(false)
+  const [showValue, setShowValue] = useState(false)
+
+  const onServiceViewChange = inview => {
+    if (!showService && inview) setShowService(true)
+  }
+
+  const onValueViewChange = inview => {
+    if (!showValue && inview) setShowValue(true)
+  }
+
   return (
     <div className={classes.section}>
-      <div className={classes.services}>
-        <Chip label='SERVICES' className={classes.yellowChip} />
-        <h2 className={classes.title}>What can we do for you?</h2>
-        <GridContainer className={classes.servicesGrid}>
-          <GridItem
-            xs={12}
-            sm={12}
-            md={4}
-            className={classes.salesforce_diagram_mobile}
-          >
-            <img
-              src={require('assets/img/salesforce_diagram.webp')}
-              style={{ maxWidth: '100%' }}
-              alt='Australian Digital'
-            ></img>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
-            <InfoArea
-              title='Salesforce consultancy'
-              description='We provide expertise on the Salesforce Platform whether you are looking to implement Sales Cloud, increase your Salesforce foot print with Service Cloud or add a customer or partner Community.'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/ic.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
-            <InfoArea
-              title='System Integration'
-              description='We are highly experienced at designing and building integrations between Salesforce and many other platforms. We are also highly accomplished at migrating data into new and existing Salesforce orgs.'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/ic2.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
-            <InfoArea
-              title='Data Archiving Strategy and Design'
-              description='We design and build Salesforce archiving solutions to prevent excess data conversations and costs and maximize the health and performance of your org.'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/ic3-min.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
-            <InfoArea
-              title='Salesforce Custom Developments'
-              description='Although we strive for clicks not code where-ever possible we are also have highly experienced developers to build custom components, processes and Salesforce integrations.'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/ic4-min.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem
-            xs={12}
-            sm={12}
-            md={4}
-            className={classes.salesforce_diagram_desktop}
-          >
-            <img
-              src={require('assets/img/salesforce_diagram.webp')}
-              style={{ maxWidth: '100%' }}
-              alt='Australian Digital'
-            ></img>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
-            <InfoArea
-              title='Salesforce Admin Support'
-              description='We provide a highly efficient admin support service which allows you to focus on doing what you do best. Running your business and growing your highly engaged customer base.'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/ic5-min.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
-            <InfoArea
-              title='Salesforce Improvements'
-              description='We are able to design and build improvements to your existing Salesforce org. Please talk to us about what we can improve for you.'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/ic6-min.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
-            <InfoArea
-              title='System Health Checks'
-              description='We are able to evaluate the health of your Salesforce org and consult with the team to remediate issues and propose improvements.'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/ic7-min.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4} className={classes.serviceRaised}>
-            <InfoArea
-              title='Application Architecture'
-              description='We are able design CRM and business solutions that streamline your business processes and provide the very best customer and user experience.'
-              src={
-                <img
-                  alt='Australian Digital'
-                  className={classes.servicesIcon}
-                  src={require('assets/img/ic8-min.webp')}
-                ></img>
-              }
-              iconColor='info'
-              vertical
-            />
-          </GridItem>
-        </GridContainer>
-        <Button
-          color='#4B0082'
-          size='lg'
-          href='/service'
-          rel='noopener noreferrer'
-          className={classes.purpleButton}
-        >
-          VIEW FULL SERVICES
-        </Button>
-      </div>
+      <InView
+        tag='div'
+        className={classes.services}
+        onChange={onServiceViewChange}
+      >
+        <Spring to={{ opacity: showService ? 1 : 0 }} delay={500}>
+          {props => {
+            console.log(props)
+            return (
+              <animated.div style={{ ...props }}>
+                <Chip label='SERVICES' className={classes.yellowChip} />
+              </animated.div>
+            )
+          }}
+        </Spring>
 
-      <div className={classes.whycustomer}>
+        <Spring to={{ opacity: showService ? 1 : 0 }} delay={1200}>
+          {props => {
+            console.log(props)
+            return (
+              <animated.div style={{ ...props }}>
+                <h2 className={classes.title}>What can we do for you?</h2>
+              </animated.div>
+            )
+          }}
+        </Spring>
+
+        <Spring to={{ opacity: showService ? 1 : 0 }} delay={2000}>
+          {props => {
+            console.log(props)
+            return (
+              <animated.div style={{ ...props }}>
+                <GridContainer className={classes.servicesGrid}>
+                  <GridItem
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    className={classes.salesforce_diagram_mobile}
+                  >
+                    <img
+                      src={require('assets/img/salesforce_diagram.webp')}
+                      style={{ maxWidth: '100%' }}
+                      alt='Australian Digital'
+                    ></img>
+                  </GridItem>
+                  <GridItem
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    className={classes.serviceRaised}
+                  >
+                    <InfoArea
+                      title='Salesforce consultancy'
+                      description='We provide expertise on the Salesforce Platform whether you are looking to implement Sales Cloud, increase your Salesforce foot print with Service Cloud or add a customer or partner Community.'
+                      src={
+                        <img
+                          alt='Australian Digital'
+                          className={classes.servicesIcon}
+                          src={require('assets/img/ic.webp')}
+                        ></img>
+                      }
+                      iconColor='info'
+                      vertical
+                    />
+                  </GridItem>
+                  <GridItem
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    className={classes.serviceRaised}
+                  >
+                    <InfoArea
+                      title='System Integration'
+                      description='We are highly experienced at designing and building integrations between Salesforce and many other platforms. We are also highly accomplished at migrating data into new and existing Salesforce orgs.'
+                      src={
+                        <img
+                          alt='Australian Digital'
+                          className={classes.servicesIcon}
+                          src={require('assets/img/ic2.webp')}
+                        ></img>
+                      }
+                      iconColor='info'
+                      vertical
+                    />
+                  </GridItem>
+                  <GridItem
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    className={classes.serviceRaised}
+                  >
+                    <InfoArea
+                      title='Data Archiving Strategy and Design'
+                      description='We design and build Salesforce archiving solutions to prevent excess data conversations and costs and maximize the health and performance of your org.'
+                      src={
+                        <img
+                          alt='Australian Digital'
+                          className={classes.servicesIcon}
+                          src={require('assets/img/ic3-min.webp')}
+                        ></img>
+                      }
+                      iconColor='info'
+                      vertical
+                    />
+                  </GridItem>
+                  <GridItem
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    className={classes.serviceRaised}
+                  >
+                    <InfoArea
+                      title='Salesforce Custom Developments'
+                      description='Although we strive for clicks not code where-ever possible we are also have highly experienced developers to build custom components, processes and Salesforce integrations.'
+                      src={
+                        <img
+                          alt='Australian Digital'
+                          className={classes.servicesIcon}
+                          src={require('assets/img/ic4-min.webp')}
+                        ></img>
+                      }
+                      iconColor='info'
+                      vertical
+                    />
+                  </GridItem>
+                  <GridItem
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    className={classes.salesforce_diagram_desktop}
+                  >
+                    <img
+                      src={require('assets/img/salesforce_diagram.webp')}
+                      style={{ maxWidth: '100%' }}
+                      alt='Australian Digital'
+                    ></img>
+                  </GridItem>
+                  <GridItem
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    className={classes.serviceRaised}
+                  >
+                    <InfoArea
+                      title='Salesforce Admin Support'
+                      description='We provide a highly efficient admin support service which allows you to focus on doing what you do best. Running your business and growing your highly engaged customer base.'
+                      src={
+                        <img
+                          alt='Australian Digital'
+                          className={classes.servicesIcon}
+                          src={require('assets/img/ic5-min.webp')}
+                        ></img>
+                      }
+                      iconColor='info'
+                      vertical
+                    />
+                  </GridItem>
+                  <GridItem
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    className={classes.serviceRaised}
+                  >
+                    <InfoArea
+                      title='Salesforce Improvements'
+                      description='We are able to design and build improvements to your existing Salesforce org. Please talk to us about what we can improve for you.'
+                      src={
+                        <img
+                          alt='Australian Digital'
+                          className={classes.servicesIcon}
+                          src={require('assets/img/ic6-min.webp')}
+                        ></img>
+                      }
+                      iconColor='info'
+                      vertical
+                    />
+                  </GridItem>
+                  <GridItem
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    className={classes.serviceRaised}
+                  >
+                    <InfoArea
+                      title='System Health Checks'
+                      description='We are able to evaluate the health of your Salesforce org and consult with the team to remediate issues and propose improvements.'
+                      src={
+                        <img
+                          alt='Australian Digital'
+                          className={classes.servicesIcon}
+                          src={require('assets/img/ic7-min.webp')}
+                        ></img>
+                      }
+                      iconColor='info'
+                      vertical
+                    />
+                  </GridItem>
+                  <GridItem
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    className={classes.serviceRaised}
+                  >
+                    <InfoArea
+                      title='Application Architecture'
+                      description='We are able design CRM and business solutions that streamline your business processes and provide the very best customer and user experience.'
+                      src={
+                        <img
+                          alt='Australian Digital'
+                          className={classes.servicesIcon}
+                          src={require('assets/img/ic8-min.webp')}
+                        ></img>
+                      }
+                      iconColor='info'
+                      vertical
+                    />
+                  </GridItem>
+                </GridContainer>
+                <Button
+                  color='#4B0082'
+                  size='lg'
+                  href='/service'
+                  rel='noopener noreferrer'
+                  className={classes.purpleButton}
+                >
+                  VIEW FULL SERVICES
+                </Button>
+              </animated.div>
+            )
+          }}
+        </Spring>
+      </InView>
+
+      <InView
+        tag='div'
+        className={classes.whycustomer}
+        onChange={onValueViewChange}
+      >
         <GridContainer justify='center'>
           <GridItem xs={12} sm={6} md={6} lg={6}>
-            <Chip label='OUR WORK' className={classes.yellowChip} />
-            <h2 className={classes.title}>
-              Why Customers <br /> Love Us?
-            </h2>
-            <h5 className={classes.subtitle}>
-              We are passionate About Salesforce and what it can do to transform
-              your business when setup correctly. Our customers love us because
-              we listen and understand and truly care about delivering an
-              optimum solution to fit your business needs.
-            </h5>
-            <div className={classes.valueContainer}>
-              <div className={classes.valueItemContainer}>
-                <img
-                  alt='Australian Digital'
-                  className={classes.valueIcon}
-                  src={require('assets/img/ico1h.webp')}
-                ></img>
-                Deep Business Understanding
-              </div>
+            <Spring to={{ opacity: showValue ? 1 : 0 }} delay={1500}>
+              {props => {
+                console.log(props)
+                return (
+                  <animated.div style={{ ...props }}>
+                    <Chip label='OUR WORK' className={classes.yellowChip} />
+                    <h2 className={classes.title}>
+                      Why Customers <br /> Love Us?
+                    </h2>{' '}
+                    <h5 className={classes.subtitle}>
+                      We are passionate About Salesforce and what it can do to
+                      transform your business when setup correctly. Our
+                      customers love us because we listen and understand and
+                      truly care about delivering an optimum solution to fit
+                      your business needs.
+                    </h5>
+                    <div className={classes.valueContainer}>
+                      <div className={classes.valueItemContainer}>
+                        <img
+                          alt='Australian Digital'
+                          className={classes.valueIcon}
+                          src={require('assets/img/ico1h.webp')}
+                        ></img>
+                        Deep Business Understanding
+                      </div>
 
-              <div className={classes.valueItemContainer}>
-                <img
-                  alt='Australian Digital'
-                  className={classes.valueIcon}
-                  src={require('assets/img/ico2h.webp')}
-                ></img>
-                Passionate about Salesforce
-              </div>
-            </div>
-
-            <Button
-              color='#4B0082'
-              href='/about'
-              size='lg'
-              rel='noopener noreferrer'
-              className={classes.purpleButton}
-            >
-              ABOUT US
-            </Button>
+                      <div className={classes.valueItemContainer}>
+                        <img
+                          alt='Australian Digital'
+                          className={classes.valueIcon}
+                          src={require('assets/img/ico2h.webp')}
+                        ></img>
+                        Passionate about Salesforce
+                      </div>
+                    </div>
+                    <Button
+                      color='#4B0082'
+                      href='/about'
+                      size='lg'
+                      rel='noopener noreferrer'
+                      className={classes.purpleButton}
+                    >
+                      ABOUT US
+                    </Button>
+                  </animated.div>
+                )
+              }}
+            </Spring>
           </GridItem>
           <GridItem xs={12} sm={6} md={6} lg={6}>
-            <img
-              alt='Australian Digital'
-              className={classes.productionImage}
-              src={require('assets/img/value.webp')}
-            ></img>
+            <Spring to={{ opacity: showValue ? 1 : 0 }} delay={1000}>
+              {props => {
+                console.log(props)
+                return (
+                  <animated.div style={{ ...props }}>
+                    <img
+                      alt='Australian Digital'
+                      className={classes.productionImage}
+                      src={require('assets/img/value.webp')}
+                    ></img>
+                  </animated.div>
+                )
+              }}
+            </Spring>
           </GridItem>
         </GridContainer>
-      </div>
+      </InView>
     </div>
   )
 }

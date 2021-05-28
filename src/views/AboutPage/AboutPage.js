@@ -69,10 +69,10 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: "1rem",
     },
     [theme.breakpoints.up("md")]: {
-      paddingTop: "6rem",
+      paddingTop: "5rem",
     },
     [theme.breakpoints.up("lg")]: {
-      paddingTop: "10rem",
+      paddingTop: "8rem",
     },
   },
 

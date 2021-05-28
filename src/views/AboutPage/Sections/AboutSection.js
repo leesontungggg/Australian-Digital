@@ -10,6 +10,7 @@ import Chip from '@material-ui/core/Chip'
 import Button from 'components/CustomButtons/Button.js'
 
 import { title } from 'assets/jss/material-kit-react.js'
+import { useSpring, animated } from 'react-spring'
 
 const useStyles = makeStyles(theme => ({
   section: {
@@ -58,7 +59,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 900
   },
   productionImage: {
-    width: '100%',
+    width: '90%',
     height: 'auto'
   },
   purpleButton: {
@@ -143,38 +144,69 @@ export default function AboutSection () {
   return (
     <div className={classes.section}>
       <GridContainer justify='center'>
-        <GridItem xs={12} sm={6} md={6} lg={6}>
-          <img
-            alt='Australian Digital'
-            className={classes.productionImage}
-            src={require('assets/img/about-min.webp')}
-          ></img>
+        <GridItem xs={12} sm={6} md={6} lg={6} style={{ display: 'flex' }}>
+          <animated.div
+            style={{
+              ...useSpring({
+                to: { opacity: 1 },
+                from: { opacity: 0 },
+                delay: 500
+              }),
+              display: 'flex'
+            }}
+          >
+            <img
+              alt='Australian Digital'
+              className={classes.productionImage}
+              src={require('assets/img/about-min.svg')}
+            ></img>
+          </animated.div>
         </GridItem>
         <GridItem xs={12} sm={6} md={6} lg={6}>
-          <Chip label='About Us' className={classes.yellowChip} />
-
-          <h2 className={classes.title}>
-            About <br />
-            Australian Digital
-          </h2>
-          <h5 className={classes.subtitle}>
-            We are a boutique Salesforce consultancy based in Sydney Australia.
-            Our consultants all have multiple Salesforce certifications and have
-            an excellent grasp of business and deep expertise and enthusiasm for
-            the Salesforce platform.
-          </h5>
-          <Button
-            color='#4B0082'
-            size='lg'
-            target='_blank'
-            rel='noopener noreferrer'
-            className={classes.purpleButton}
+          <animated.div
+            style={{
+              ...useSpring({
+                to: { opacity: 1 },
+                from: { opacity: 0 },
+                delay: 1000
+              })
+            }}
           >
-            ABOUT US
-          </Button>
+            <Chip label='About Us' className={classes.yellowChip} />
+
+            <h2 className={classes.title}>
+              About <br />
+              Australian Digital
+            </h2>
+            <h5 className={classes.subtitle}>
+              We are a boutique Salesforce consultancy based in Sydney
+              Australia. Our consultants all have multiple Salesforce
+              certifications and have an excellent grasp of business and deep
+              expertise and enthusiasm for the Salesforce platform.
+            </h5>
+            <Button
+              color='#4B0082'
+              size='lg'
+              target='_blank'
+              rel='noopener noreferrer'
+              className={classes.purpleButton}
+            >
+              ABOUT US
+            </Button>
+          </animated.div>
         </GridItem>
       </GridContainer>
-      <div className={classes.services}>
+
+      <animated.div
+        className={classes.services}
+        style={{
+          ...useSpring({
+            to: { opacity: 1 },
+            from: { opacity: 0 },
+            delay: 2000
+          })
+        }}
+      >
         <GridContainer className={classes.servicesGrid}>
           <GridItem xs={12} sm={12} md={5} className={classes.serviceRaised}>
             <InfoArea
@@ -276,7 +308,7 @@ export default function AboutSection () {
             VIEW SERVICES
           </Button>
         </GridContainer>
-      </div>
+      </animated.div>
       <div className={classes.whycustomer}>
         <GridContainer justify='center'>
           <GridItem xs={12} sm={6} md={6} lg={6}>

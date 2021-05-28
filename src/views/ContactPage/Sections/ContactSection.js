@@ -11,6 +11,7 @@ import { useFormik } from 'formik'
 import * as yup from 'yup'
 import Button from 'components/CustomButtons/Button.js'
 import TextField from '@material-ui/core/TextField'
+import { useSpring, animated } from 'react-spring'
 
 const validationSchema = yup.object().shape({
   first_name: yup
@@ -335,158 +336,178 @@ export default function ContactSection () {
   return (
     <div className={classes.section}>
       <div className={classes.services}>
-        <GridContainer justify='center'>
-          <GridItem
-            className={classes.dFlexCenter}
-            xs={12}
-            sm={6}
-            md={6}
-            lg={6}
-          >
-            <h2 className={classes.title}>Contact Us</h2>
-          </GridItem>
-          <GridItem xs={12} sm={6} md={6} lg={6}>
-            <img
-              alt='Australian Digital'
-              className={classes.productionImage}
-              src={require('assets/img/teamwork.svg')}
-            ></img>
-          </GridItem>
-        </GridContainer>
-        <form onSubmit={formik.handleSubmit}>
-          <GridContainer className={classes.formContainer} justify='center'>
-            <GridItem xs={12} sm={12} md={12} lg={12}>
-              <h4 className={classes.formTitle}>
-                Please get in touch
-                <br /> and let us know how we can help
-              </h4>
+        <animated.div
+          style={useSpring({
+            to: { opacity: 1 },
+            from: { opacity: 0 },
+            delay: 500
+          })}
+        >
+          <GridContainer justify='center'>
+            <GridItem
+              className={classes.dFlexCenter}
+              xs={12}
+              sm={6}
+              md={6}
+              lg={6}
+            >
+              <h2 className={classes.title}>Contact Us</h2>
             </GridItem>
-            <GridItem xs={12} sm={12} md={12} lg={12}>
-              <TextField
-                className={classes.textFieldSpacing}
-                fullWidth
-                variant='outlined'
-                id='first_name'
-                name='first_name'
-                label='First Name'
-                onChange={formik.handleChange}
-                error={
-                  formik.touched.first_name && Boolean(formik.errors.first_name)
-                }
-                helperText={
-                  formik.touched.first_name && formik.errors.first_name
-                }
-                autoComplete='off'
-              />
+            <GridItem xs={12} sm={6} md={6} lg={6}>
+              <img
+                alt='Australian Digital'
+                className={classes.productionImage}
+                src={require('assets/img/teamwork.svg')}
+              ></img>
             </GridItem>
-            <GridItem xs={12} sm={12} md={12} lg={12}>
-              <TextField
-                className={classes.textFieldSpacing}
-                fullWidth
-                variant='outlined'
-                id='last_name'
-                name='last_name'
-                label='Last Name'
-                onChange={formik.handleChange}
-                error={
-                  formik.touched.last_name && Boolean(formik.errors.last_name)
-                }
-                helperText={formik.touched.last_name && formik.errors.last_name}
-                autoComplete='off'
-              />
-            </GridItem>
-            <GridItem xs={12} sm={12} md={12} lg={12}>
-              <TextField
-                className={classes.textFieldSpacing}
-                fullWidth
-                variant='outlined'
-                id='title'
-                name='title'
-                label='Title'
-                onChange={formik.handleChange}
-                autoComplete='off'
-              />
-            </GridItem>
-            <GridItem xs={12} sm={12} md={12} lg={12}>
-              <TextField
-                className={classes.textFieldSpacing}
-                fullWidth
-                variant='outlined'
-                id='email'
-                name='email'
-                label='Email'
-                onChange={formik.handleChange}
-                error={formik.touched.email && Boolean(formik.errors.email)}
-                helperText={formik.touched.email && formik.errors.email}
-                autoComplete='off'
-              />
-            </GridItem>
-            <GridItem xs={12} sm={12} md={12} lg={12}>
-              <TextField
-                className={classes.textFieldSpacing}
-                fullWidth
-                variant='outlined'
-                id='phone'
-                name='phone'
-                label='Phone'
-                onChange={formik.handleChange}
-                error={formik.touched.phone && Boolean(formik.errors.phone)}
-                helperText={formik.touched.phone && formik.errors.phone}
-                autoComplete='off'
-              />
-            </GridItem>
-            <GridItem xs={12} sm={12} md={12} lg={12}>
-              <TextField
-                className={classes.textFieldSpacing}
-                fullWidth
-                variant='outlined'
-                id='company'
-                name='company'
-                label='Company'
-                onChange={formik.handleChange}
-                autoComplete='off'
-              />
-            </GridItem>
-            <GridItem xs={12} sm={12} md={12} lg={12}>
-              <TextField
-                className={classes.textFieldSpacing}
-                fullWidth
-                variant='outlined'
-                id='description'
-                name='description'
-                label='How can we help?'
-                onChange={formik.handleChange}
-                autoComplete='off'
-              />
-            </GridItem>
-            <GridItem xs={12} sm={12} md={12} lg={12}>
-              <Button
-                disabled={isSuccess}
-                className={classes.yellowSubmitButton}
-                variant='contained'
-                type='submit'
-              >
-                Submit
-              </Button>
-            </GridItem>
-
-            {isSuccess ? (
-              <GridItem
-                style={{ textAlign: 'center' }}
-                xs={12}
-                sm={12}
-                md={12}
-                lg={12}
-                className={classes.whiteSuccessButton}
-              >
-                <h4>
-                  Thank you for your enquiry. We look forward to working with
-                  you.
+          </GridContainer>
+        </animated.div>
+        <animated.div
+          style={useSpring({
+            to: { opacity: 1 },
+            from: { opacity: 0 },
+            delay: 1500
+          })}
+        >
+          {' '}
+          <form onSubmit={formik.handleSubmit}>
+            <GridContainer className={classes.formContainer} justify='center'>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <h4 className={classes.formTitle}>
+                  Please get in touch
+                  <br /> and let us know how we can help
                 </h4>
               </GridItem>
-            ) : null}
-          </GridContainer>
-        </form>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <TextField
+                  className={classes.textFieldSpacing}
+                  fullWidth
+                  variant='outlined'
+                  id='first_name'
+                  name='first_name'
+                  label='First Name'
+                  onChange={formik.handleChange}
+                  error={
+                    formik.touched.first_name &&
+                    Boolean(formik.errors.first_name)
+                  }
+                  helperText={
+                    formik.touched.first_name && formik.errors.first_name
+                  }
+                  autoComplete='off'
+                />
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <TextField
+                  className={classes.textFieldSpacing}
+                  fullWidth
+                  variant='outlined'
+                  id='last_name'
+                  name='last_name'
+                  label='Last Name'
+                  onChange={formik.handleChange}
+                  error={
+                    formik.touched.last_name && Boolean(formik.errors.last_name)
+                  }
+                  helperText={
+                    formik.touched.last_name && formik.errors.last_name
+                  }
+                  autoComplete='off'
+                />
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <TextField
+                  className={classes.textFieldSpacing}
+                  fullWidth
+                  variant='outlined'
+                  id='title'
+                  name='title'
+                  label='Title'
+                  onChange={formik.handleChange}
+                  autoComplete='off'
+                />
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <TextField
+                  className={classes.textFieldSpacing}
+                  fullWidth
+                  variant='outlined'
+                  id='email'
+                  name='email'
+                  label='Email'
+                  onChange={formik.handleChange}
+                  error={formik.touched.email && Boolean(formik.errors.email)}
+                  helperText={formik.touched.email && formik.errors.email}
+                  autoComplete='off'
+                />
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <TextField
+                  className={classes.textFieldSpacing}
+                  fullWidth
+                  variant='outlined'
+                  id='phone'
+                  name='phone'
+                  label='Phone'
+                  onChange={formik.handleChange}
+                  error={formik.touched.phone && Boolean(formik.errors.phone)}
+                  helperText={formik.touched.phone && formik.errors.phone}
+                  autoComplete='off'
+                />
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <TextField
+                  className={classes.textFieldSpacing}
+                  fullWidth
+                  variant='outlined'
+                  id='company'
+                  name='company'
+                  label='Company'
+                  onChange={formik.handleChange}
+                  autoComplete='off'
+                />
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <TextField
+                  className={classes.textFieldSpacing}
+                  fullWidth
+                  variant='outlined'
+                  id='description'
+                  name='description'
+                  label='How can we help?'
+                  onChange={formik.handleChange}
+                  autoComplete='off'
+                />
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <Button
+                  disabled={isSuccess}
+                  className={classes.yellowSubmitButton}
+                  variant='contained'
+                  type='submit'
+                >
+                  Submit
+                </Button>
+              </GridItem>
+
+              {isSuccess ? (
+                <GridItem
+                  style={{ textAlign: 'center' }}
+                  xs={12}
+                  sm={12}
+                  md={12}
+                  lg={12}
+                  className={classes.whiteSuccessButton}
+                >
+                  <h4>
+                    Thank you for your enquiry. We look forward to working with
+                    you.
+                  </h4>
+                </GridItem>
+              ) : null}
+            </GridContainer>
+          </form>
+        </animated.div>
       </div>
     </div>
   )

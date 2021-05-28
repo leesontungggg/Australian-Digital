@@ -170,43 +170,20 @@ export default function LandingPage (props) {
                   label='WELCOME TO AUSTRALIAN DIGITAL'
                   className={classes.yellowChip}
                 />
-              </animated.div>
 
-              <animated.div
-                style={useSpring({
-                  to: { opacity: 1 },
-                  from: { opacity: 0 },
-                  delay: 2000
-                })}
-              >
                 <h1 className={classes.title}>
                   We Provide Salesforce and Marketing Automation Consultancy
                 </h1>
-              </animated.div>
-              <animated.div
-                style={useSpring({
-                  to: { opacity: 1 },
-                  from: { opacity: 0 },
-                  delay: 3000
-                })}
-              >
+
                 <h4 className={classes.subtitle}>
                   Salesforce, Pardot and Salesforce Marketing Cloud Consultancy.
                   System implementation and Enhancement, managed Services and
                   solutions to provide a rich lead pipeline and excellent
                   customer experiences.
                 </h4>
-              </animated.div>
 
-              <br />
+                <br />
 
-              <animated.div
-                style={useSpring({
-                  to: { opacity: 1 },
-                  from: { opacity: 0 },
-                  delay: 4000
-                })}
-              >
                 <img
                   className={classes.saleforcePartner}
                   src={require('assets/img/salesforce_partner.webp')}
