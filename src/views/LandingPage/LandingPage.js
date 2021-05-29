@@ -152,7 +152,7 @@ export default function LandingPage (props) {
         image={require('assets/img/landing.webp')}
         style={useSpring({
           to: { opacity: isPageFullyLoaded ? 1 : 0 },
-          delay: 500
+          delay: 1000
         })}
       >
         <div className={classes.container}>
@@ -167,7 +167,7 @@ export default function LandingPage (props) {
                 style={useSpring({
                   to: { opacity: 1 },
                   from: { opacity: 0 },
-                  delay: 1000
+                  delay: 1500
                 })}
               >
                 <Chip
