@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { useEffect, Suspense, useState } from 'react'
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -16,7 +16,7 @@ import Parallax from 'components/Parallax/Parallax.js'
 
 import { container, title } from 'assets/jss/material-kit-react.js'
 import Chip from '@material-ui/core/Chip'
-import { useSpring, animated } from 'react-spring'
+import { Spring, useSpring, animated } from 'react-spring'
 
 // Sections for this page
 
@@ -127,7 +127,12 @@ const AnimatedParallax = animated(Parallax)
 
 export default function LandingPage (props) {
   const classes = useStyles()
+  const [isPageFullyLoaded, setPageFullyLoaded] = useState(false)
   const { ...rest } = props
+
+  useEffect(() => {
+    setPageFullyLoaded(true)
+  })
   return (
     <div className={classes.white_main}>
       <Header
@@ -146,8 +151,7 @@ export default function LandingPage (props) {
         className={classes.parallax_background}
         image={require('assets/img/landing.webp')}
         style={useSpring({
-          to: { opacity: 1 },
-          from: { opacity: 0 },
+          to: { opacity: isPageFullyLoaded ? 1 : 0 },
           delay: 500
         })}
       >
