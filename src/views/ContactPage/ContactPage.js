@@ -6,18 +6,14 @@ import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 
 // core components
-import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import ContactFooter from 'components/ContactFooter/ContactFooter.js'
 
 
-import HeaderLinks from "components/Header/HeaderLinks.js";
 import { container, title } from "assets/jss/material-kit-react.js";
 
 // Sections for this page
 import ContactSection from "./Sections/ContactSection.js";
-
-const dashboardRoutes = [];
 
 const useStyles = makeStyles((theme) => ({
   white_main: {
@@ -89,22 +85,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ContactPage(props) {
   const classes = useStyles();
-  const { ...rest } = props;
   return (
     <div className={classes.white_main}>
-      <Header
-        color="transparent"
-        routes={dashboardRoutes}
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
-        fixed
-        changeColorOnScroll={{
-          height: 100,
-          color: "black",
-        }}
-        {...rest}
-      />
-
       <div className={classes.main}>
         <div className={classes.container}>
           <ContactSection />

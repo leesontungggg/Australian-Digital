@@ -210,7 +210,6 @@ export default function ProductSection () {
       >
         <Spring to={{ opacity: showService ? 1 : 0 }} delay={500}>
           {props => {
-            console.log(props)
             return (
               <animated.div style={{ ...props }}>
                 <Chip label='SERVICES' className={classes.yellowChip} />
@@ -221,7 +220,6 @@ export default function ProductSection () {
 
         <Spring to={{ opacity: showService ? 1 : 0 }} delay={1200}>
           {props => {
-            console.log(props)
             return (
               <animated.div style={{ ...props }}>
                 <h2 className={classes.title}>What can we do for you?</h2>
@@ -232,7 +230,6 @@ export default function ProductSection () {
 
         <Spring to={{ opacity: showService ? 1 : 0 }} delay={2000}>
           {props => {
-            console.log(props)
             return (
               <animated.div style={{ ...props }}>
                 <GridContainer className={classes.servicesGrid}>
@@ -445,7 +442,6 @@ export default function ProductSection () {
           <GridItem xs={12} sm={6} md={6} lg={6}>
             <Spring to={{ opacity: showValue ? 1 : 0 }} delay={1500}>
               {props => {
-                console.log(props)
                 return (
                   <animated.div style={{ ...props }}>
                     <Chip label='OUR WORK' className={classes.yellowChip} />
@@ -495,7 +491,6 @@ export default function ProductSection () {
           <GridItem xs={12} sm={6} md={6} lg={6}>
             <Spring to={{ opacity: showValue ? 1 : 0 }} delay={1000}>
               {props => {
-                console.log(props)
                 return (
                   <animated.div style={{ ...props }}>
                     <img

@@ -18,11 +18,7 @@ import { container, title } from 'assets/jss/material-kit-react.js'
 import Chip from '@material-ui/core/Chip'
 import { Spring, useSpring, animated } from 'react-spring'
 
-// Sections for this page
-
-const ProductSection = React.lazy(() => import('./Sections/ProductSection.js'))
-
-const dashboardRoutes = []
+import ProductSection from './Sections/ProductSection'
 
 const useStyles = makeStyles(theme => ({
   white_main: {
@@ -135,18 +131,6 @@ export default function LandingPage (props) {
   })
   return (
     <div className={classes.white_main}>
-      <Header
-        color='transparent'
-        routes={dashboardRoutes}
-        brand='Material Kit React'
-        rightLinks={<HeaderLinks />}
-        fixed
-        changeColorOnScroll={{
-          height: 100,
-          color: 'black'
-        }}
-        {...rest}
-      />
       <AnimatedParallax
         className={classes.parallax_background}
         image={require('assets/img/landing.webp')}
