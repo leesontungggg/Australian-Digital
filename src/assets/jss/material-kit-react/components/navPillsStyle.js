@@ -1,6 +1,5 @@
 import {
   roseColor,
-  primaryColor,
   secondaryColor,
   infoColor,
   successColor,

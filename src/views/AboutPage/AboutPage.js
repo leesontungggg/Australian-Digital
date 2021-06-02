@@ -93,7 +93,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function AboutPage (props) {
   const classes = useStyles()
-  const { ...rest } = props
   return (
     <div className={classes.white_main}>
       <div className={classes.main}>

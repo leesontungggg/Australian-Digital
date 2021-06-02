@@ -1,19 +1,10 @@
-import React, { useEffect, StrictMode, Suspense } from 'react'
+import React, { StrictMode, Suspense } from 'react'
 import ReactDOM from 'react-dom'
-import { createBrowserHistory } from 'history'
 import {
-  Router,
   Route,
   Switch,
-  useLocation,
   BrowserRouter
 } from 'react-router-dom'
-import {
-  useTransition,
-  animated,
-  AnimatedProps,
-  useSpringRef
-} from '@react-spring/web'
 import Header from 'components/Header/Header.js'
 import HeaderLinks from 'components/Header/HeaderLinks.js'
 
@@ -29,24 +20,8 @@ const PortfolioPage = React.lazy(() =>
 )
 const ContactPage = React.lazy(() => import('views/ContactPage/ContactPage.js'))
 
-function App () {
-  const location = useLocation()
-  const transRef = useSpringRef()
-  const routesTransition = useTransition(
-    location,
-    location => location.pathname,
-    {
-      ref: transRef,
-      keys: null,
-      from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
-      enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
-      leave: { opacity: 0, transform: 'translate3d(-50%,0,0)' }
-    }
-  )
+function App() {
 
-  useEffect(() => {
-    transRef.start()
-  }, [location])
   return (
     <>
       <Header
@@ -59,20 +34,15 @@ function App () {
           color: 'black'
         }}
       />
-      {routesTransition.map((props, item) => {
-        console.log(item)
-        return (
-          <animated.div style={props}>
-            <Switch location={item}>
-              <Route path='/about' component={AboutPage} />
-              <Route path='/service' component={ServicePage} />
-              <Route path='/portfolio' component={PortfolioPage} />
-              <Route path='/contact' component={ContactPage} />
-              <Route path='/' component={LandingPage} />
-            </Switch>
-          </animated.div>
-        )
-      })}
+
+      <Switch>
+        <Route path='/about' component={AboutPage} />
+        <Route path='/service' component={ServicePage} />
+        <Route path='/portfolio' component={PortfolioPage} />
+        <Route path='/contact' component={ContactPage} />
+        <Route path='/' component={LandingPage} />
+      </Switch>
+
     </>
   )
 }
