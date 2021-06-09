@@ -31,7 +31,7 @@ function App() {
         fixed
         changeColorOnScroll={{
           height: 100,
-          color: 'black'
+          color: 'white'
         }}
       />
 
