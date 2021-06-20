@@ -13,179 +13,7 @@ import { title } from 'assets/jss/material-kit-react.js'
 import { Spring, animated } from 'react-spring'
 import { InView } from 'react-intersection-observer'
 
-const useStyles = makeStyles(theme => ({
-  section: {
-    [theme.breakpoints.down('sm')]: {
-      padding: '0 0'
-    },
-    [theme.breakpoints.up('md')]: {
-      padding: '40px 0'
-    },
-    [theme.breakpoints.up('lg')]: {
-      padding: '70px 0'
-    },
 
-    textAlign: 'center'
-  },
-  title: {
-    ...title,
-    marginBottom: '1rem',
-    marginTop: '30px',
-    minHeight: '32px',
-    textDecoration: 'none',
-    position: 'relative',
-    color: '#4B0082',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '1.5rem'
-    },
-    [theme.breakpoints.up('md')]: {
-      fontSize: '1.8rem'
-    },
-    [theme.breakpoints.up('lg')]: {
-      fontSize: '2rem'
-    }
-  },
-  subtitle: {
-    fontSize: '1.313rem',
-    maxWidth: '500px',
-    margin: '10px 0',
-    color: '#032d60',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem'
-    },
-    [theme.breakpoints.up('md')]: {
-      fontSize: '1.2rem'
-    },
-    [theme.breakpoints.up('lg')]: {
-      fontSize: '1.3rem'
-    }
-  },
-  description: {
-    color: '#999'
-  },
-  yellowChip: {
-    color: '#FFBC42',
-    backgroundColor: '#FCA80F21',
-    fontWeight: 900
-  },
-  productionImage: {
-    width: '100%',
-    height: 'auto'
-  },
-  purpleButton: {
-    background: '#4B0082',
-    borderRadius: '50px',
-    padding: '12px 30px'
-  },
-  services: {
-    marginTop: '100px'
-  },
-  serviceRaised: {
-    padding: '0px 16px'
-    // borderRadius: '24px',
-    // boxShadow:
-    //   '0 -3px 24px 2px rgb(0 0 0 / 5%), 0 6px 30px 5px rgb(0 0 0 / 0%), 0 8px 10px -5px rgb(0 0 0 / 0%)'
-  },
-  servicesGrid: {
-    gridGap: '100px 0px',
-    justifyContent: 'center',
-    marginBottom: '32px'
-  },
-  salesforce_diagram_mobile: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    [theme.breakpoints.down('sm')]: {
-      display: 'block'
-    },
-    [theme.breakpoints.up('md')]: {
-      display: 'none'
-    },
-    [theme.breakpoints.up('lg')]: {
-      display: 'none'
-    }
-  },
-  salesforce_diagram_desktop: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    [theme.breakpoints.down('sm')]: {
-      display: 'none'
-    },
-    [theme.breakpoints.up('md')]: {
-      display: 'flex'
-    },
-    [theme.breakpoints.up('lg')]: {
-      display: 'flex'
-    }
-  },
-  servicesIcon: {
-    width: 'auto',
-
-    [theme.breakpoints.down('sm')]: {
-      height: '70px'
-    },
-    [theme.breakpoints.up('md')]: {
-      height: '80px'
-    },
-    [theme.breakpoints.up('lg')]: {
-      height: '100px'
-    }
-  },
-  whycustomer: {
-    marginTop: '100px'
-  },
-  valueContainer: {
-    marginTop: 20,
-    marginBottom: 20,
-    color: '#4B0082'
-  },
-  valueIcon: {
-    marginRight: 16
-  },
-  valueItemContainer: {
-    padding: '4px 0px'
-  },
-  contact: {
-    marginTop: '100px'
-  },
-  contactAddressContainer: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  contactAddress: {
-    textAlign: 'start',
-    fontSize: '1.313rem',
-    maxWidth: '500px',
-    margin: '10px 0',
-    color: '#032d60',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem'
-    },
-    [theme.breakpoints.up('md')]: {
-      fontSize: '1.2rem'
-    },
-    [theme.breakpoints.up('lg')]: {
-      fontSize: '1.3rem'
-    }
-  },
-  contactPhone: {
-    textAlign: 'end',
-    fontSize: '1.313rem',
-    maxWidth: '500px',
-    margin: '10px 0',
-    color: '#032d60',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem'
-    },
-    [theme.breakpoints.up('md')]: {
-      fontSize: '1.2rem'
-    },
-    [theme.breakpoints.up('lg')]: {
-      fontSize: '1.3rem'
-    }
-  }
-}))
 
 export default function ProductSection () {
   const classes = useStyles()
@@ -508,3 +336,177 @@ export default function ProductSection () {
     </div>
   )
 }
+
+const useStyles = makeStyles(theme => ({
+  section: {
+    [theme.breakpoints.down('sm')]: {
+      padding: '0 0'
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: '40px 0'
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: '70px 0'
+    },
+
+    textAlign: 'center'
+  },
+  title: {
+    ...title,
+    marginBottom: '1rem',
+    marginTop: '30px',
+    minHeight: '32px',
+    textDecoration: 'none',
+    position: 'relative',
+    color: '#4B0082',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.5rem'
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.8rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '2rem'
+    }
+  },
+  subtitle: {
+    fontSize: '1.313rem',
+    maxWidth: '500px',
+    margin: '10px 0',
+    color: '#032d60',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1rem'
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '1.3rem'
+    }
+  },
+  description: {
+    color: '#999'
+  },
+  yellowChip: {
+    color: '#FFBC42',
+    backgroundColor: '#FCA80F21',
+    fontWeight: 900
+  },
+  productionImage: {
+    width: '100%',
+    height: 'auto'
+  },
+  purpleButton: {
+    background: '#4B0082',
+    borderRadius: '50px',
+    padding: '12px 30px'
+  },
+  services: {
+    marginTop: '100px'
+  },
+  serviceRaised: {
+    padding: '0px 16px'
+    // borderRadius: '24px',
+    // boxShadow:
+    //   '0 -3px 24px 2px rgb(0 0 0 / 5%), 0 6px 30px 5px rgb(0 0 0 / 0%), 0 8px 10px -5px rgb(0 0 0 / 0%)'
+  },
+  servicesGrid: {
+    gridGap: '100px 0px',
+    justifyContent: 'center',
+    marginBottom: '32px'
+  },
+  salesforce_diagram_mobile: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    [theme.breakpoints.down('sm')]: {
+      display: 'block'
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'none'
+    },
+    [theme.breakpoints.up('lg')]: {
+      display: 'none'
+    }
+  },
+  salesforce_diagram_desktop: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'flex'
+    },
+    [theme.breakpoints.up('lg')]: {
+      display: 'flex'
+    }
+  },
+  servicesIcon: {
+    width: 'auto',
+
+    [theme.breakpoints.down('sm')]: {
+      height: '70px'
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '80px'
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: '100px'
+    }
+  },
+  whycustomer: {
+    marginTop: '100px'
+  },
+  valueContainer: {
+    marginTop: 20,
+    marginBottom: 20,
+    color: '#4B0082'
+  },
+  valueIcon: {
+    marginRight: 16
+  },
+  valueItemContainer: {
+    padding: '4px 0px'
+  },
+  contact: {
+    marginTop: '100px'
+  },
+  contactAddressContainer: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  contactAddress: {
+    textAlign: 'start',
+    fontSize: '1.313rem',
+    maxWidth: '500px',
+    margin: '10px 0',
+    color: '#032d60',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1rem'
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '1.3rem'
+    }
+  },
+  contactPhone: {
+    textAlign: 'end',
+    fontSize: '1.313rem',
+    maxWidth: '500px',
+    margin: '10px 0',
+    color: '#032d60',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1rem'
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.2rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '1.3rem'
+    }
+  }
+}))

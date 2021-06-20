@@ -75,6 +75,10 @@ export default function NavPills(props) {
         axis={direction === "rtl" ? "x-reverse" : "x"}
         index={active}
         onChangeIndex={handleChangeIndex}
+        slideStyle={{ overflow: 'visible'}}
+        containerStyle={{
+          transition: 'transform 0.35s cubic-bezier(0.15, 0.3, 0.25, 1) 0s'
+      }}
       >
         {tabs.map((prop, key) => {
           return (
