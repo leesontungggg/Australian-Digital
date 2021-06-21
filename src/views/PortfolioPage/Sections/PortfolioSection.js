@@ -43,7 +43,7 @@ export default function PortfolioSection() {
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/products/education.svg')}
+              src={require('assets/img/experience/education.svg')}
             ></img>
           }
         />
@@ -62,7 +62,7 @@ export default function PortfolioSection() {
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/products/healthcare.svg')}
+              src={require('assets/img/experience/healthcare.svg')}
             ></img>
           }
         />
@@ -81,7 +81,7 @@ export default function PortfolioSection() {
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/products/engineering.svg')}
+              src={require('assets/img/experience/engineering.svg')}
             ></img>
           }
         />
@@ -100,7 +100,7 @@ export default function PortfolioSection() {
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/products/retail.svg')}
+              src={require('assets/img/experience/retail.svg')}
             ></img>
           }
         />
@@ -131,7 +131,7 @@ export default function PortfolioSection() {
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/products/banking.svg')}
+              src={require('assets/img/experience/banking.svg')}
             ></img>
           }
         />
@@ -150,7 +150,7 @@ export default function PortfolioSection() {
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/products/government.svg')}
+              src={require('assets/img/experience/government.svg')}
             ></img>
           }
         />
@@ -169,7 +169,7 @@ export default function PortfolioSection() {
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/products/councils.svg')}
+              src={require('assets/img/experience/councils.svg')}
             ></img>
           }
         />
@@ -188,7 +188,7 @@ export default function PortfolioSection() {
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/products/finance.svg')}
+              src={require('assets/img/experience/finance.svg')}
             ></img>
           }
         />
@@ -207,7 +207,7 @@ export default function PortfolioSection() {
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/products/manufacturing.svg')}
+              src={require('assets/img/experience/manufacturing.svg')}
             ></img>
           }
         />
@@ -226,7 +226,7 @@ export default function PortfolioSection() {
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/products/oilandgas.svg')}
+              src={require('assets/img/experience/oilandgas.svg')}
             ></img>
           }
         />
@@ -245,7 +245,7 @@ export default function PortfolioSection() {
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/products/telco.svg')}
+              src={require('assets/img/experience/telco.svg')}
             ></img>
           }
         />
@@ -275,13 +275,12 @@ export default function PortfolioSection() {
         className={classes.serviceRaised}
       >
         <InfoArea
-          title='Salesforce consultancy'
-          description='We provide expertise on the Salesforce Platform whether you are looking to implement Sales Cloud, increase your Salesforce foot print with Service Cloud or add a customer or partner Community.'
+          title='Marketing Cloud'
           src={
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/ic.webp')}
+              src={require('assets/img/products/marketingcloud.png')}
             ></img>
           }
           iconColor='info'
@@ -295,13 +294,12 @@ export default function PortfolioSection() {
         className={classes.serviceRaised}
       >
         <InfoArea
-          title='System Integration'
-          description='We are highly experienced at designing and building integrations between Salesforce and many other platforms. We are also highly accomplished at migrating data into new and existing Salesforce orgs.'
+          title='Service Cloud'
           src={
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/ic2.webp')}
+              src={require('assets/img/products/servicecloud.png')}
             ></img>
           }
           iconColor='info'
@@ -315,13 +313,12 @@ export default function PortfolioSection() {
         className={classes.serviceRaised}
       >
         <InfoArea
-          title='Data Archiving Strategy and Design'
-          description='We design and build Salesforce archiving solutions to prevent excess data conversations and costs and maximize the health and performance of your org.'
+          title='Pardot'
           src={
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/ic3-min.webp')}
+              src={require('assets/img/products/pardot.png')}
             ></img>
           }
           iconColor='info'
@@ -335,13 +332,69 @@ export default function PortfolioSection() {
         className={classes.serviceRaised}
       >
         <InfoArea
-          title='Salesforce Custom Developments'
-          description='Although we strive for clicks not code where-ever possible we are also have highly experienced developers to build custom components, processes and Salesforce integrations.'
+          title='Sales Cloud'
           src={
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/ic4-min.webp')}
+              src={require('assets/img/products/salescloud.png')}
+            ></img>
+          }
+          iconColor='info'
+          vertical
+        />
+      </GridItem>
+      <GridItem
+        xs={12}
+        sm={12}
+        md={4}
+        className={classes.serviceRaised}
+      >
+        <InfoArea
+          title='Salesforce Custom Apps'
+          src={
+            <img
+              alt='Australian Digital'
+              className={classes.servicesIcon}
+              src={require('assets/img/products/customapp.png')}
+            ></img>
+          }
+          iconColor='info'
+          vertical
+        />
+      </GridItem>
+      <GridItem
+        xs={12}
+        sm={12}
+        md={4}
+        className={classes.serviceRaised}
+      >
+        <InfoArea
+          title='Salesforce Voice'
+          src={
+            <img
+              alt='Australian Digital'
+              className={classes.servicesIcon}
+              src={require('assets/img/products/voice.webp')}
+            ></img>
+          }
+          iconColor='info'
+          vertical
+        />
+      </GridItem>
+      <GridItem
+        xs={12}
+        sm={12}
+        md={4}
+        className={classes.serviceRaised}
+      >
+        <InfoArea
+          title='CPQ'
+          src={
+            <img
+              alt='Australian Digital'
+              className={classes.servicesIcon}
+              src={require('assets/img/products/cpq.png')}
             ></img>
           }
           iconColor='info'
@@ -367,13 +420,12 @@ export default function PortfolioSection() {
         className={classes.serviceRaised}
       >
         <InfoArea
-          title='Salesforce Admin Support'
-          description='We provide a highly efficient admin support service which allows you to focus on doing what you do best. Running your business and growing your highly engaged customer base.'
+          title='Communities'
           src={
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/ic5-min.webp')}
+              src={require('assets/img/products/communities.jpg')}
             ></img>
           }
           iconColor='info'
@@ -387,13 +439,12 @@ export default function PortfolioSection() {
         className={classes.serviceRaised}
       >
         <InfoArea
-          title='Salesforce Improvements'
-          description='We are able to design and build improvements to your existing Salesforce org. Please talk to us about what we can improve for you.'
+          title='Data Archiving Solutions'
           src={
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/ic6-min.webp')}
+              src={require('assets/img/products/dataarchiving.png')}
             ></img>
           }
           iconColor='info'
@@ -407,13 +458,12 @@ export default function PortfolioSection() {
         className={classes.serviceRaised}
       >
         <InfoArea
-          title='System Health Checks'
-          description='We are able to evaluate the health of your Salesforce org and consult with the team to remediate issues and propose improvements.'
+          title='Licence Advice'
           src={
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/ic7-min.webp')}
+              src={require('assets/img/products/licenceadvice.webp')}
             ></img>
           }
           iconColor='info'
@@ -427,13 +477,69 @@ export default function PortfolioSection() {
         className={classes.serviceRaised}
       >
         <InfoArea
-          title='Application Architecture'
-          description='We are able design CRM and business solutions that streamline your business processes and provide the very best customer and user experience.'
+          title='Architectural Design Work'
           src={
             <img
               alt='Australian Digital'
               className={classes.servicesIcon}
-              src={require('assets/img/ic8-min.webp')}
+              src={require('assets/img/products/architecturaldesignwork.webp')}
+            ></img>
+          }
+          iconColor='info'
+          vertical
+        />
+      </GridItem>
+      <GridItem
+        xs={12}
+        sm={12}
+        md={4}
+        className={classes.serviceRaised}
+      >
+        <InfoArea
+          title='Custom Application Design and Build'
+          src={
+            <img
+              alt='Australian Digital'
+              className={classes.servicesIcon}
+              src={require('assets/img/products/customapplicationdesignandbuild.png')}
+            ></img>
+          }
+          iconColor='info'
+          vertical
+        />
+      </GridItem>
+      <GridItem
+        xs={12}
+        sm={12}
+        md={4}
+        className={classes.serviceRaised}
+      >
+        <InfoArea
+          title='Integrations'
+          src={
+            <img
+              alt='Australian Digital'
+              className={classes.servicesIcon}
+              src={require('assets/img/products/integration.png')}
+            ></img>
+          }
+          iconColor='info'
+          vertical
+        />
+      </GridItem>
+      <GridItem
+        xs={12}
+        sm={12}
+        md={4}
+        className={classes.serviceRaised}
+      >
+        <InfoArea
+          title='Einstein'
+          src={
+            <img
+              alt='Australian Digital'
+              className={classes.servicesIcon}
+              src={require('assets/img/products/einstein.png')}
             ></img>
           }
           iconColor='info'
@@ -455,12 +561,12 @@ export default function PortfolioSection() {
           alignCenter
           tabs={[
             {
-              tabButton: 'INDUSTRY EXPERIENCE',
-              tabContent: experienceRender()
-            },
-            {
               tabButton: 'PRODUCTS',
               tabContent: productRender()
+            },
+            {
+              tabButton: 'INDUSTRY EXPERIENCE',
+              tabContent: experienceRender()
             }
           ]}
         />
