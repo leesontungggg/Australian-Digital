@@ -71,7 +71,7 @@ const navPillsStyle = (theme) => ({
     },
   },
   contentWrapper: {
-    marginTop: "20px",
+    marginTop: "100px",
   },
   primary: {
     "&,&:hover": {

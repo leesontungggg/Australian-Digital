@@ -10,6 +10,7 @@ import InfoArea from 'components/InfoArea/InfoArea.js'
 
 
 import { title } from 'assets/jss/material-kit-react.js'
+import { useSpring, animated } from 'react-spring'
 
 
 
@@ -142,7 +143,7 @@ export default function PortfolioSection() {
         md={4}
         className={classes.serviceRaised}
       >
-         <InfoArea
+        <InfoArea
           title='Government'
           iconColor='info'
           vertical
@@ -161,7 +162,7 @@ export default function PortfolioSection() {
         md={4}
         className={classes.serviceRaised}
       >
-         <InfoArea
+        <InfoArea
           title='Councils'
           iconColor='info'
           vertical
@@ -555,21 +556,42 @@ export default function PortfolioSection() {
   return (
     <div className={classes.section}>
       <div className={classes.services}>
-        <h2 className={classes.title}>Our Portfolio</h2>
-        <NavPills
-          color='primary'
-          alignCenter
-          tabs={[
-            {
-              tabButton: 'PRODUCTS',
-              tabContent: productRender()
-            },
-            {
-              tabButton: 'INDUSTRY EXPERIENCE',
-              tabContent: experienceRender()
-            }
-          ]}
-        />
+        <animated.div
+          style={{
+            ...useSpring({
+              to: { opacity: 1 },
+              from: { opacity: 0 },
+              delay: 500
+            })
+          }}
+        >
+          <h2 className={classes.title}>Our Portfolio</h2>
+        </animated.div>
+        <animated.div
+          style={{
+            ...useSpring({
+              to: { opacity: 1 },
+              from: { opacity: 0 },
+              delay: 1500
+            })
+          }}
+        >
+          <NavPills
+            color='primary'
+            alignCenter
+            tabs={[
+              {
+                tabButton: 'PRODUCTS',
+                tabContent: productRender()
+              },
+              {
+                tabButton: 'INDUSTRY EXPERIENCE',
+                tabContent: experienceRender()
+              }
+            ]}
+          />
+        </animated.div>
+        
       </div>
     </div>
   )
